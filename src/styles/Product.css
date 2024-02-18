@@ -1,0 +1,53 @@
+.product-heading p {
+  color: #777;
+  font-size: 15px;
+  font-weight: 400;
+}
+.product-heading h2 {
+  font-family: "Oswald", sans-serif;
+  color: #222;
+  font-size: 36px;
+  font-weight: 600;
+}
+.product-heading span {
+  font-family: "Oswald", sans-serif;
+  color: #222;
+  font-size: 36px;
+  font-weight: 600;
+  border-bottom: 2px solid #384aeb;
+  padding-bottom: 8px;
+}
+
+.product-card-img img {
+  padding-bottom: 20px;
+  padding-top: 60px;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-text {
+  text-align: center;
+}
+
+.card-text p {
+  color: #777;
+  font-size: 15px;
+  font-weight: 400;
+}
+.card-text h4 {
+  font-size: 20px;
+  font-weight: 400;
+  font-family: "Oswald", sans-serif;
+  cursor: pointer;
+}
+.card-text h4:hover {
+  color: #384aeb;
+}
+.card-text .product-price {
+  font-size: 18px;
+  font-weight: 500;
+}/*# sourceMappingURL=Product.css.map */

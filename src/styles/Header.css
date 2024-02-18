@@ -1,0 +1,18 @@
+ul li {
+  display: inline;
+  list-style: none;
+  margin-right: 40px;
+}
+
+ul.navbar1 li.nav-item button {
+  border: 1px solid #EEEEEE;
+  padding: 10px 45px;
+  color: #222;
+  border-radius: 30px;
+  background-color: #fff;
+  font-weight: 500;
+}
+ul.navbar1 li.nav-item button:hover {
+  border: 1px solid #384aeb;
+  transition: all 0.4s ease;
+}/*# sourceMappingURL=Header.css.map */

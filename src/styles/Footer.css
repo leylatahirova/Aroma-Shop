@@ -1,0 +1,41 @@
+.footer-about h4 {
+  font-size: 36px;
+  font-weight: 600;
+  font-family: "Oswald", sans-serif;
+  color: #fff;
+  margin-bottom: 28px;
+}
+.footer-about p {
+  color: #7b838a;
+}
+
+.footer-links h4 {
+  font-size: 18px;
+  font-family: "Oswald", sans-serif;
+  color: #fff;
+  margin-bottom: 28px;
+  font-weight: 500;
+}
+.footer-links ul {
+  display: flex;
+  flex-direction: column;
+  color: #7b838a;
+}
+
+.footer-gallery h4 {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
+  font-family: "Oswald", sans-serif;
+  color: #fff;
+  margin-bottom: 28px;
+}
+.footer-gallery ul {
+  background-color: red;
+  height: 250px;
+}
+.footer-gallery li {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 10px;
+}/*# sourceMappingURL=Footer.css.map */
