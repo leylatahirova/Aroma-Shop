@@ -1,26 +1,18 @@
-import Header from "./Components/Header";
-import Banner from "./Components/Banner";
-import Slider from "./Components/Slider";
-import Product from "./Components/Product";
-import SaleBanner from "./Components/SaleBanner";
-import './styles/responsive.sass';
-import BestSellers from "./Components/BestSellers";
-import Footer from "./Components/Footer";
-// import LatestNews from "./Components/LatestNews";
-
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./styles/responsive.sass";
+import Home from "./Pages/Home";
+import Contact from "./Pages/Contact";
 
 function App() {
   return (
-    <>
-      <Header/>
-      <Banner/>
-      <Slider/>
-      <Product/>
-      <SaleBanner/>
-      <BestSellers/>
-      {/* <LatestNews/> */}
-      <Footer/>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

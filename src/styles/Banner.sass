@@ -1,51 +1,92 @@
-$primary-color: #384AEB
-$secondary-color: #222
 
-.banner-row
-    display: flex
-    justify-content: center
-    align-items: center
-   
-
-.banner-img
-    width: 40%
-    background-color: $primary-color
-    padding-top: 60px
-    img
-        padding-left: 100px
+.hero-banner
+    background-color:#F1F6F7 
+    position: relative
+    margin-bottom: 10px
+  
+    @media(min-width: 991px)
+      z-index: 111;
     
+    &::before
+      content: ""
+      display: block
+      width: 5%
+      height: 100%
+      background-color: #3A4DEA 
+      position: absolute
+      top: 0
+      left: 0
+  
+      @media(min-width: 575px)
+        width: 20%;
+      
+  
+      @media(min-width: 991px)
+        width: 35%;
+      
 
-.banner-text
-    background-color: #F1F6F7
-    width: 60%
-    height: 800px
-    padding-left: 150px
-    padding-top: 180px
-
-.banner-text
-    div
-        width: 70%
-    h4
+    &__img
+      padding-top: 60px
+      position: relative
+      top: 1px
+    //   left: 60px;
+    
+  
+    &__content
+      @media(max-width: 575px)
+        padding-bottom: 50px;
+      
+  
+      @media(min-width: 1000px)
+        max-width: 495px;
+      
+  
+      h4
         font-size: 30px
-        margin-bottom: 12px
-        font-weight: 400
         color: #555555
-    h1
-        font-size: 50px
-        margin-bottom: 25px
+        margin-bottom: 12px
+      
+  
+      h1
+        font-size: 25px
         text-transform: uppercase
         font-weight: 700
-        color: $secondary-color
-    p
-        margin-bottom: 40px
-        color: #777
-        font-size: 15px
-        font-weight: 400
-    button
-        border: none
-        padding: 12px 41px
-        background: #384aeb
-        font-weight: 500
-        border-radius: 30px
+        margin-bottom: 10px
+  
+        @media(min-width: 767px)
+          font-size: 30px
+          margin-bottom: 25px
+        
+  
+        @media(min-width: 991px)
+          font-size: 50px
+        
+      
+  
+      p
+        margin-bottom: 10px
+        color: #777777
+  
+        @media(min-width: 767px)
+          margin-bottom: 40px
+        
+      
+      
+      button
         color: #fff
+        background-color: #3A4DEA 
+        border-radius: 30px
+        border: 1px solid #384aeb
+        padding: 12px 41px
+        font-weight: 500
+        &:hover
+          border: 1px solid #384aeb
+          transition: all .4s ease
+          background-color: transparent
+          color: #222
+      
+    
+
+
+
 

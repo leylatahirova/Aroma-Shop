@@ -9,7 +9,7 @@ import { FaHeart } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <Container fluid style={{backgroundColor:"#002347", padding:"30px"}}>
+    <Container fluid style={{backgroundColor:"#002347", paddingTop:"200px", paddingInline:"100px", paddingBottom:"40px"}}>
         <Row>
             <div className='col-lg-3 col-md-6 col-sm-6'>
                 <div className='footer-about'>

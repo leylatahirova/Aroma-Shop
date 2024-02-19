@@ -7,6 +7,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { IoIosSearch } from "react-icons/io";
 import { SlBasket } from "react-icons/sl";
 import "../styles/Header.sass";
+import { Link } from 'react-router-dom';
 
 export default function Header() {
   return (
@@ -22,11 +23,21 @@ export default function Header() {
         </Col>
         <Col xs={5}>
           <ul className="navbar1" >
-            <li className="nav-item active">Home</li>
-            <li className="nav-item">Shop</li>
-            <li className="nav-item">Blog</li>
-            <li className="nav-item">Pages</li>
-            <li className="nav-item">Contact</li>
+            <li className="nav-item active">
+              <Link to="/home">Home</Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/shop">Shop</Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/blog">Blog</Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/pages">Pages</Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/contact">Contact</Link>
+            </li>
           </ul>
         </Col>
         <Col>
