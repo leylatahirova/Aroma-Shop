@@ -26,6 +26,7 @@ export default function SliderComponent() {
       title: "Wireless Headphone",
       category: "Accessories Item",
     },
+    
   ];
 
   const settings = {
@@ -63,8 +64,7 @@ export default function SliderComponent() {
   };
 
   return (
-    <Container>
-      <Row>
+      <Row >
         <div className="banner-row-images">
           <Slider {...settings}>
             {sliderImages.map((item) => (
@@ -72,13 +72,13 @@ export default function SliderComponent() {
                 <img src={item.image} alt="slide1" />
                 <div className="slide-overlay">
                   <h5>{item.title}</h5>
-                  <p>{item.category} Item</p>
+                  <p>{item.category}</p>
                 </div>
               </div>
             ))}
           </Slider>
         </div>
       </Row>
-    </Container>
+  
   );
 }

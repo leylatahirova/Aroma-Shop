@@ -2,10 +2,14 @@
 .hero-banner
     background-color:#F1F6F7 
     position: relative
-    margin-bottom: 10px
+    padding-inline: 120px
+    @media(max-width: 1024px)
+      padding-inline: 20px
+
+    
   
     @media(min-width: 991px)
-      z-index: 111;
+      z-index: 111
     
     &::before
       content: ""
@@ -29,12 +33,17 @@
       padding-top: 60px
       position: relative
       top: 1px
-    //   left: 60px;
+      @media(max-width: 768px)
+        display: none
+
+    
     
   
     &__content
+      padding-left: 80px
       @media(max-width: 575px)
-        padding-bottom: 50px;
+        padding-bottom: 50px
+        padding-left: 0px
       
   
       @media(min-width: 1000px)

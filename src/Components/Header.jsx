@@ -5,14 +5,14 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoIosSearch } from "react-icons/io";
-import { SlBasket } from "react-icons/sl";
+import { TfiShoppingCart } from "react-icons/tfi";
 import "../styles/Header.sass";
 import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
-    <header className="container" style={{paddingTop:"20px"}}>
-      <Row>
+    <header className="header">
+      <Row style={{margin:"0 auto", maxWidth:"1200px" }}>
         <Col>
           <div className="logo">
             <Link to="/home"><img src="./images/logo.png.png" alt="logo" /></Link>
@@ -43,10 +43,11 @@ export default function Header() {
         <Col>
           <ul className="navbar1">
             <li className="nav-item">
-              <IoIosSearch style={{ color: "#222", fontSize: "20px" }} />
+              <IoIosSearch style={{ color: "#222", fontSize: "20px", cursor:"pointer" }} />
             </li>
             <li className="nav-item">
-              <SlBasket />
+              <div className="shopping-basket">1</div>
+              <TfiShoppingCart style={{ color: "#222", fontSize: "18px", cursor:"pointer" }} />
             </li>
             <li className="nav-item">
               <button>Buy Now</button>

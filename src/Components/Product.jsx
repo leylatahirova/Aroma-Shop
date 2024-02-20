@@ -70,7 +70,7 @@ export default function Product() {
 
 
   return (
-    <Container>
+    <Container style={{paddingInline:"80px", marginTop:"100px", marginBottom:"100px"}}>
         <Row>
             <div className='product-heading'>
                 <p>Popular Item in the market</p>

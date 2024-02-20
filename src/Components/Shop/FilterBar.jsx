@@ -1,7 +1,9 @@
 import React from "react";
+import { Container } from "react-bootstrap";
 
 export default function FilterBar() {
   return (
+    <Container style={{paddingInline:"80px"}}>
     <div className="filter-bar d-flex flex-wrap align-items-center">
       <div className="sorting">
         <select>
@@ -20,13 +22,10 @@ export default function FilterBar() {
       <div>
         <div className="input-group filter-bar-search">
           <input type="text" placeholder="Search" />
-          <div className="input-group-append">
-            <button type="button">
-              <i className="ti-search"></i>
-            </button>
-          </div>
+          <div className="input-group-append"> </div>
         </div>
       </div>
     </div>
+    </Container>
   );
 }

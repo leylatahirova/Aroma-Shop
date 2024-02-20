@@ -15,7 +15,6 @@ export default function Banner() {
               <img className="img-fluid" src="./images/banner/hero-banner.png" alt="banner-img" />
             </div>
           </div>
-          <div style={{paddingLeft:"80px"}}>
             <div className="hero-banner__content">
               <h4>Shop is fun</h4>
               <h1>Browse Our Premium Product</h1>
@@ -26,7 +25,6 @@ export default function Banner() {
               </p>
               <Link to="/shopcategory"><Button>Browse Now</Button></Link>
             </div>
-          </div>
         </div>
       </div>
     </section>

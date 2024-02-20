@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 
 export default function SaleBanner() {
   return (
-    <Container>
         <Row>
             <div className='offer-text'>
                 <h3>Up To 50% Off</h3>
@@ -15,7 +14,7 @@ export default function SaleBanner() {
                 <Link to="/shopcategory"><Button>Shop Now</Button></Link>
             </div>
         </Row>
-    </Container>
+   
   )
 }
 

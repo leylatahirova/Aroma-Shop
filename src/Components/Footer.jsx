@@ -10,7 +10,7 @@ import { FaHeart } from "react-icons/fa";
 export default function Footer() {
   return (
     <Container fluid style={{backgroundColor:"#002347", paddingTop:"180px", paddingInline:"100px", paddingBottom:"40px"}}>
-        <Row>
+        <Row style={{margin:"0 auto", maxWidth:"1200px" }}>
             <div className='col-lg-3 col-md-6 col-sm-6'>
                 <div className='footer-about'>
                     <h4>
@@ -64,34 +64,40 @@ export default function Footer() {
             </div>
             <div className='offset-lg-1 col-lg-3 col-md-6 col-sm-6'>
                 <div className='footer-contact'>
-                    <h4>
-                        Contact Us
-                    </h4>
+                    <h4>Contact Us</h4>
                     <div className='ml-40'>
-                        <h6 >
-                            <div><FaLocationArrow style={{color:"#fff"}}/></div> Head Office
-                        </h6>
-                        <p>123, Main Street, Your City</p>
-
-                        <h6><div><FaPhone style={{color:"#fff"}} /></div> Phone Number</h6>
-                        <p>
-                            +123 456 7890 
-                            <br/>
-                            +123 456 7890
-                        </p>
-
-                        <h6>
-                        <div><MdEmail style={{color:"#fff"}}/> </div> Email
-                        </h6>
-                        <p>
-                            free@infoexample.com
-                            <br/>
-                            www.infoexample.com
-                        </p>
+                        <div style={{display:"flex"}}>
+                            <div className='footer__icon'><FaLocationArrow style={{color:"#fff"}}/></div> 
+                            <div className='footer__info'>
+                                <h6 >Head Office</h6>
+                                <p>123, Main Street, Your City</p>
+                            </div>
+                        </div>
+                        <div style={{display:"flex"}}>
+                            <div className='footer__icon'><FaPhone style={{color:"#fff"}} /></div>
+                            <div className='footer__info'>
+                                <h6> Phone Number</h6>
+                                <p>+123 456 7890 
+                                    <br/>
+                                    +123 456 7890
+                                </p>
+                            </div>
+                        </div>
+                        <div style={{display:"flex"}}>
+                        <div className='footer__icon'><MdEmail style={{color:"#fff"}}/> </div>
+                            <div className='footer__info'>
+                                <h6>Email</h6>
+                                <p>
+                                    free@infoexample.com
+                                    <br/>
+                                    www.infoexample.com
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div style={{display:"flex", justifyContent:"center",alignContent:"center", padding:"20px"}}>
+            <div style={{display:"flex", justifyContent:"center",alignContent:"center"}}>
                 <p style={{color:"#fff"}}>
                      Copyright ©2024 All rights reserved | This template is made with <FaHeart />  by <span style={{color:"#384aeb"}}>Colorlib</span>
                  </p>

@@ -1,1 +1,58 @@
-/*# sourceMappingURL=Contact.css.map */
+.contact__map {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 120px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-control {
+  border-radius: 0;
+  height: 40px;
+  padding-left: 18px;
+  border-color: transparent;
+  background: rgba(130, 139, 178, 0.1);
+}
+.form-control:focus {
+  outline: 0;
+  box-shadow: none;
+}
+.form-control::-moz-placeholder {
+  font-size: 14px;
+  color: #999999;
+}
+.form-control::placeholder {
+  font-size: 14px;
+  color: #999999;
+}
+
+.different-control {
+  height: 100% !important;
+}
+
+.contact-info {
+  display: flex;
+}
+
+.media-body {
+  padding-left: 20px;
+}
+.media-body h3 {
+  font-family: "Oswald", sans-serif;
+  color: #222;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 0px;
+}
+.media-body p {
+  color: #999999;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.button-contactForm {
+  border-radius: 0px;
+}/*# sourceMappingURL=Contact.css.map */

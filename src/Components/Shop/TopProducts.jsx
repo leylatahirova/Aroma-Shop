@@ -1,6 +1,7 @@
 import React from "react";
 import "../../styles/TopProducts.sass";
 import TopProductsCol from "./TopProductsCol";
+import { Container } from "react-bootstrap";
 
 export default function TopProducts() {
   const topProductsData = [
@@ -86,20 +87,22 @@ export default function TopProducts() {
     ],
   ];
   return (
-    <div className="top-products">
-      <div className="container">
-        <div className="top-products__text">
-          <p>Popular Item in the market</p>
-          <h2>
-            Top<span> Product</span>
-          </h2>
-        </div>
-        <div style={{ display: "flex" }}>
-          {topProductsData.map((group, index) => (
-            <TopProductsCol key={index} products={group} />
-          ))}
+    <Container style={{paddingInline:"80px"}}>
+      <div className="top-products">
+        <div className="container">
+          <div className="top-products__text">
+            <p>Popular Item in the market</p>
+            <h2>
+              Top<span> Product</span>
+            </h2>
+          </div>
+          <div style={{ display: "flex" }}>
+            {topProductsData.map((group, index) => (
+              <TopProductsCol key={index} products={group} />
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </Container>
   );
 }

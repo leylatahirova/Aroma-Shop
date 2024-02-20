@@ -5,7 +5,7 @@ import Button from "./Button";
 
 export default function Subscribe() {
   return (
-    <Container>
+    <Container style={{paddingInline:"80px"}}>
       <Row>
         <section className="subscribe-position">
             <div className="subscribe text-center">
