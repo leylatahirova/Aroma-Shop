@@ -5,6 +5,7 @@ import { IoIosSearch } from "react-icons/io";
 import { GiShoppingCart } from "react-icons/gi";
 import { CiHeart } from "react-icons/ci";
 import Row from "react-bootstrap/Row";
+import { Link } from 'react-router-dom';
 
 
 export default function Product() {
@@ -82,27 +83,27 @@ export default function Product() {
                         <div className='product-card-img'>
                             <img src={productItem.image} alt="productImage" />
                         </div>
+                        <div className='product-icon'>
+                            <div className='icon'>
+                                <IoIosSearch style={{color:"#fff",fontSize:"20px"}} />
+                            </div>
+                            <div className='icon'>
+                                < GiShoppingCart style={{color:"#fff",fontSize:"20px"}} />
+                            </div>
+                            <div className='icon'>
+                                <CiHeart style={{color:"#fff",fontSize:"20px"}} />
+                            </div>
+                        </div>
+                    <div>
+                </div>
                         <div className='card-text'>
                             <p>{productItem.category}</p>
-                            <h4>{productItem.title}</h4>
+                            <Link to="../productdetails"><h4>{productItem.title}</h4></Link>
                             <p className='product-price'>{productItem.price}</p>
                         </div>
                     </div>
                 </div>
                 ))}
-                <div>
-                    <div style={{display:"flex", gap:"10px"}}>
-                        <div style={{backgroundColor:"#677AFA", width:"40px", height:"40px",display:"flex", alignItems:"center", justifyContent:"center"}}>
-                            <IoIosSearch style={{color:"#fff",fontSize:"20px"}} />
-                        </div>
-                        <div style={{backgroundColor:"#677AFA", width:"40px", height:"40px",display:"flex", alignItems:"center", justifyContent:"center"}}>
-                        <   GiShoppingCart style={{color:"#fff",fontSize:"20px"}} />
-                        </div>
-                        <div style={{backgroundColor:"#677AFA", width:"40px", height:"40px",display:"flex", alignItems:"center", justifyContent:"center"}}>
-                            <CiHeart style={{color:"#fff",fontSize:"20px"}} />
-                        </div>
-                    </div>
-                </div>
             </div>
         </Row>
     </Container>

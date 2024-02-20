@@ -1,46 +1,49 @@
-import React, {useRef} from 'react';
+import React, { useRef } from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import { GoArrowLeft } from "react-icons/go";
 import { GoArrowRight } from "react-icons/go";
+import { IoIosSearch } from "react-icons/io";
+import { GiShoppingCart } from "react-icons/gi";
+import { CiHeart } from "react-icons/ci";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import "../styles/BestSellers.sass";
+import { Link } from "react-router-dom";
 
 export default function BestSellers() {
- const sliderRef = useRef(null);
+  const sliderRef = useRef(null);
   const products = [
     {
       id: 1,
       image: "/images/products/product1.png",
       category: "Accessories",
       title: "Quartz Belt Watch",
-      price: "$150.00"
+      price: "$150.00",
     },
     {
       id: 2,
       image: "/images/products/product2.png",
       category: "Beauty",
       title: "Women Freshwash",
-      price: "$140.00"
+      price: "$140.00",
     },
     {
       id: 3,
       image: "/images/products/product3.png",
       category: "Decor",
       title: "Room Flash Light",
-      price: "$160.00"
+      price: "$160.00",
     },
     {
       id: 4,
       image: "/images/products/product4.png",
       category: "Decor",
       title: "Room Flash Light",
-      price: "$160.00"
-    }
+      price: "$160.00",
+    },
   ];
-
 
   const settings = {
     slidesToShow: 4,
@@ -76,42 +79,55 @@ export default function BestSellers() {
     ],
   };
 
-const handlePrevSlide = () => {
+  const handlePrevSlide = () => {
     sliderRef.current.slickPrev();
-}
+  };
 
-const handleNextSlide = () => {
+  const handleNextSlide = () => {
     sliderRef.current.slickNext();
-}
+  };
 
   return (
     <Container>
       <Row>
-        <div className='product-heading'>
+        <div className="product-heading">
           <p>Popular Item in the market</p>
-          <h2>Best<span> Sellers</span></h2>
+          <h2>
+            Best<span> Sellers</span>
+          </h2>
         </div>
-        <div className='row'>
-        <Slider ref={sliderRef} {...settings}>
-          {products.map((productItem) => (
-            <div key={productItem.id} className='col-md-6 col-lg-4 col-xl-3'>
-              <div className='product-card'>
-                <div className='product-card-img'>
-                  <img src={productItem.image} alt="productImage" />
-                </div>
-                <div className='card-text'>
-                  <p>{productItem.category}</p>
-                  <h4>{productItem.title}</h4>
-                  <p className='product-price'>{productItem.price}</p>
+        <div className="row">
+          <Slider ref={sliderRef} {...settings}>
+            {products.map((productItem) => (
+              <div key={productItem.id} className="col-md-6 col-lg-4 col-xl-3">
+                <div className="product-card">
+                  <div className="product-card-img">
+                    <img src={productItem.image} alt="productImage" />
+                  </div>
+                  <div className="product-icon">
+                    <div className="icon">
+                      <IoIosSearch style={{ color: "#fff", fontSize: "20px"}}/>
+                    </div>
+                    <div className="icon">
+                      <GiShoppingCart style={{ color: "#fff", fontSize: "20px"}}/>
+                    </div>
+                    <div className="icon">
+                      <CiHeart style={{ color: "#fff", fontSize: "20px"}} />
+                    </div>
+                  </div>
+                  <div className="card-text">
+                    <p>{productItem.category}</p>
+                    <Link to="../productdetails"><h4>{productItem.title}</h4></Link>
+                    <p className="product-price">{productItem.price}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </Slider>
-        <div style={{textAlign:"center", fontSize:"20px", cursor:"pointer"}}>
+            ))}
+          </Slider>
+          <div style={{ textAlign: "center", fontSize: "20px", cursor: "pointer" }}>
             <GoArrowLeft onClick={handlePrevSlide} />
             <GoArrowRight onClick={handleNextSlide} />
-        </div>
+          </div>
         </div>
       </Row>
     </Container>

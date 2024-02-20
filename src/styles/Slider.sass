@@ -1,14 +1,35 @@
 
-.banner-row-images
-    img
-        width: 422px
-        margin-right: 10px
-        margin-top: 10px
-       
+.slider-info
+  position: relative
+  &:hover .slide-overlay
+    top: 240px
+    opacity: 1
+    visibility: visible
+  img
+    cursor: pointer
+    width: 422px
+    margin-right: 10px
+    margin-top: 10px
+    &:hover
+      transition: all .4s ease
+      background-color: #fff
+      opacity: 0.3
+      top: 210px
 
-        &:hover
-          transition: all .4s ease
-          background-color: #fff
-          opacity: 0.3
-          top: 210px
-
+.slide-overlay
+  cursor: pointer
+  top: 76%
+  z-index: 9
+  transition: all, 0.5s
+  opacity: 0
+  visibility: hidden
+  position: absolute
+  width: 220px
+  padding: 20px
+  background-color: #384aeb
+  color: #fff
+    
+  h5
+    font-family: "Oswald",sans-serif
+  p
+    font-size: 14px

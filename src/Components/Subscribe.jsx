@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row } from "react-bootstrap";
 import "../styles/Subscribe.sass";
+import Button from "./Button";
 
 export default function Subscribe() {
   return (
@@ -24,7 +25,7 @@ export default function Subscribe() {
                         }
                         />
                     </div>
-                  <button type="submit">Subscribe Now</button>
+                  <Button type="submit">Subscribe Now</Button>
                 </form>
               </div>
             </div>

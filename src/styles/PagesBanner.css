@@ -1,0 +1,17 @@
+.banner-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #F1F6F7;
+  padding: 160px;
+  margin-bottom: 100px;
+}
+.banner-text h1 {
+  font-size: 36px;
+  color: #222222;
+  font-family: "Oswald", sans-serif;
+}
+.banner-text p {
+  color: #777777;
+}/*# sourceMappingURL=PagesBanner.css.map */

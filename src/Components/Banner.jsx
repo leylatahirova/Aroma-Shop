@@ -1,8 +1,8 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/Banner.sass";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
+import Button from "./Button";
+import { Link } from "react-router-dom";
 
 
 export default function Banner() {
@@ -24,7 +24,7 @@ export default function Banner() {
                 meat beho upon own earth without morning over third. Their male
                 dry. They are great appear whose land fly grass.
               </p>
-              <button>Browse Now</button>
+              <Link to="/shopcategory"><Button>Browse Now</Button></Link>
             </div>
           </div>
         </div>

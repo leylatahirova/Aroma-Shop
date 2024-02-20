@@ -27,12 +27,50 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+}
+.product-card:hover .product-icon {
+  top: 240px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.product-icon {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 272px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: absolute;
+  left: 6%;
+  top: 56%;
+  z-index: 9;
+  transition: all, 0.5s;
+  opacity: 0;
+  visibility: hidden;
+}
+.product-icon .icon {
+  background-color: #8796f7;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.product-icon .icon:hover {
+  background-color: #384aeb;
 }
 
 .card-text {
   text-align: center;
 }
-
+.card-text a {
+  text-decoration: none;
+  color: #222;
+}
 .card-text p {
   color: #777;
   font-size: 15px;
