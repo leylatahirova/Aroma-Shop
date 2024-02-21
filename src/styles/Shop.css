@@ -1,7 +1,103 @@
+.option-a {
+  border: 1px solid #eee;
+  font-size: 14px;
+  color: #999999;
+  height: 38px;
+  padding-left: 15px;
+  outline: none;
+  margin-right: 15px;
+}
+
+.filter__bar {
+  display: flex;
+  padding: 10px 20px 10px 20px;
+  background-color: #f1f6f7;
+}
+.filter__bar input {
+  border: 1px solid #eee;
+  font-size: 14px;
+  color: #999999;
+  height: 38px;
+  padding-left: 15px;
+  outline: none;
+  position: relative;
+  margin-left: 370px;
+}
+.filter__bar .input__search {
+  cursor: pointer;
+  color: #999999;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+.filter__bar:focus {
+  outline: 0;
+  box-shadow: none;
+}
+.filter__bar::-moz-placeholder {
+  color: #999999;
+}
+.filter__bar::placeholder {
+  color: #999999;
+}
+
+.product__row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product__text h3 {
+  font-size: 24px;
+  font-weight: 500;
+  color: #222;
+  margin-bottom: 20px;
+}
+.product__text h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #384aeb;
+  margin-bottom: 10px;
+}
+.product__text ul {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0px;
+}
+.product__text ul li {
+  color: #555;
+  padding-right: 20px;
+}
+.product__text ul span {
+  color: #797979;
+}
+.product__text p {
+  padding-top: 20px;
+  border-top: 1px dotted #eeeeee;
+  border-bottom: 1px dotted #eeeeee;
+  margin-top: 20px;
+  padding-bottom: 26px;
+  margin-bottom: 0;
+  color: #777;
+  font-size: 15px;
+  font-weight: 400;
+}
+.product__text label {
+  padding-right: 20px;
+  padding-top: 40px;
+}
+.product__text label input {
+  width: 60px;
+  border: 1px solid #eee;
+}
+
 .product__icon {
+  padding-top: 40px;
+  gap: 10px;
   display: flex;
 }
 .product__icon .product__icon1 {
+  cursor: pointer;
   background-color: #E9F0F2;
   padding: 10px;
   width: 40px;
@@ -10,4 +106,33 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.product__icon .product__icon1:hover {
+  background-color: #fff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.sidebar-categories .sidebar-list {
+  background-color: #384aeb;
+  font-family: "Oswald", sans-serif;
+  line-height: 50px;
+  padding: 0 30px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #fff;
+}
+.sidebar-categories ul {
+  display: flex;
+  flex-direction: column;
+  background-color: #f1f6f7;
+  padding: 20px 28px;
+  color: #777;
+  font-size: 15px;
+}
+.sidebar-categories ul li {
+  padding-bottom: 15px;
+}
+
+.latest-product {
+  width: 860px;
 }/*# sourceMappingURL=Shop.css.map */

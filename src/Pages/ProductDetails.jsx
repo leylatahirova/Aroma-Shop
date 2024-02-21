@@ -14,7 +14,7 @@ export default function ProductDetails() {
     <>
       <Header />
       <PagesBanner text1="Shop Single" text2="Home-Shop Single" />
-      <Container>
+      <Container style={{paddingInline:"40px"}}>
         <Row className="product__row">
           <Col lg={5}>
             <div className="product__img">
@@ -26,9 +26,7 @@ export default function ProductDetails() {
               <h3>Faded SkyBlu Denim Jeans</h3>
               <h2>$149.99</h2>
               <ul>
-                <li>
-                  Category<span> :Household</span>
-                </li>
+                <li>Category<span> :Household</span> </li>
                 <li>
                   Availibility<span> :In Stock</span>
                 </li>
@@ -41,7 +39,7 @@ export default function ProductDetails() {
               </p>
               <label>
                 Quantity:
-                <input></input>
+                <input type="number" defaultValue={0}></input>
               </label>
               <Button>Add to cart</Button>
               <div className="product__icon">
