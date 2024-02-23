@@ -1,20 +1,25 @@
-import React from "react";
+import React, {useState} from "react";
 import Header from "../Components/Header";
 import PagesBanner from "../Components/PagesBanner";
 import TopProducts from "../Components/Shop/TopProducts";
 import Footer from "../Components/Footer";
 import "../styles/Shop.sass";
 import { Container, Row, Col } from "react-bootstrap";
-import Button from "../Components/Button";
 import { IoDiamondOutline } from "react-icons/io5";
 import { IoMdHeartEmpty } from "react-icons/io";
+import Button from 'react-bootstrap/Button';
+import Offcanvas from 'react-bootstrap/Offcanvas';
+import { Link } from "react-router-dom";
 
 export default function ProductDetails() {
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   return (
     <>
       <Header />
       <PagesBanner text1="Shop Single" text2="Home-Shop Single" />
-      <Container style={{paddingInline:"40px"}}>
+      <Container style={{ paddingInline: "40px" }}>
         <Row className="product__row">
           <Col lg={5}>
             <div className="product__img">
@@ -26,7 +31,9 @@ export default function ProductDetails() {
               <h3>Faded SkyBlu Denim Jeans</h3>
               <h2>$149.99</h2>
               <ul>
-                <li>Category<span> :Household</span> </li>
+                <li>
+                  Category<span> :Household</span>{" "}
+                </li>
                 <li>
                   Availibility<span> :In Stock</span>
                 </li>
@@ -39,9 +46,9 @@ export default function ProductDetails() {
               </p>
               <label>
                 Quantity:
-                <input type="number" defaultValue={0}></input>
+                <input type="number" defaultValue={1}></input>
               </label>
-              <Button>Add to cart</Button>
+              <Button variant="primary" onClick={handleShow}>Add to cart</Button>
               <div className="product__icon">
                 <div className="product__icon1">
                   <IoDiamondOutline />
@@ -54,6 +61,28 @@ export default function ProductDetails() {
           </Col>
         </Row>
       </Container>
+      <Offcanvas placement="end" show={show} onHide={handleClose}>
+        <Offcanvas.Header closeButton>
+          <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+        </Offcanvas.Header>
+        <Offcanvas.Body>
+            <div className="canvas">
+              <h6>Faded SkyBlu Denim Jeans</h6>
+              <div className="canvas__info">
+                <img src="./images/products/product1.png" alt="product1" />
+                <div>
+                  <p>Category :Household</p>
+                  <p>Availibility :In Stock</p>
+                  <p>$149.99</p>
+                </div>
+              </div>
+              <div className="product__button">
+                <Link to="/productcheckout"><Button variant="primary" >Checkout</Button></Link>
+                <Link to="/shoppingcart"><Button variant="primary" >View cart</Button></Link>
+              </div>
+            </div>
+        </Offcanvas.Body>
+      </Offcanvas>
       <TopProducts />
       <Footer />
     </>

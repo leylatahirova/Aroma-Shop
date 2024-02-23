@@ -95,6 +95,26 @@
             background-color: #fff
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px
 
+.canvas
+    position: relative
+    h6
+        padding-top: 30px
+        padding-bottom: 10px
+    .canvas__info
+        display: flex
+        border-bottom: 1px solid #909090
+        img
+            width: 100px
+            height: 100px
+            margin-right: 20px
+    .product__button
+        display: flex
+        justify-content: center
+        top: 525px
+        left: 70px
+        position: absolute
+        gap: 40px
+
 // sidebar-categories
 .sidebar-categories
     .sidebar-list
@@ -105,15 +125,62 @@
         font-size: 18px
         font-weight: 400
         color: #fff
+    .sidebar-all
+        background-color: #f1f6f7
+
     ul
         display: flex
         flex-direction: column
-        background-color: #f1f6f7
+
         padding: 20px 28px
         color: #777
         font-size: 15px
+        span
+            color: black
         li
-            padding-bottom: 15px
+            line-height: 32px
+            label
+                padding-left: 10px
 
 .latest-product
     width: 860px
+
+// Shopping-Cart
+.cart__area_thead
+    th
+        font-size: 16px
+        font-weight: 500
+        font-family: "Oswald",sans-serif
+        color: #222
+       
+        padding-bottom: 15px
+
+.cart__area__image
+    padding: 30px 250px 30px 0px
+    display: flex
+    justify-content: center
+    align-items: center
+    img
+        padding-right: 20px
+        
+
+tbody
+    border-top: 1px solid #EEEEEE
+    border-bottom: 1px solid #EEEEEE
+    td
+        padding-right: 0px
+        button
+            font-size: 14px
+            margin-right: 2px
+            margin-top: 20px
+            margin-bottom: 20px
+            
+    input
+        outline: none
+        border: 1px solid #eee
+        width: 100px
+        height: 40px
+
+    h5
+        font-size: 15px
+        color: #222

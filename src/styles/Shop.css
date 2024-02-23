@@ -112,6 +112,20 @@
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
+.canvas h6 {
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+.canvas .canvas__info {
+  display: flex;
+  border-bottom: 1px solid #909090;
+}
+.canvas .canvas__info img {
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+}
+
 .sidebar-categories .sidebar-list {
   background-color: #384aeb;
   font-family: "Oswald", sans-serif;
@@ -130,7 +144,7 @@
   font-size: 15px;
 }
 .sidebar-categories ul li {
-  padding-bottom: 15px;
+  line-height: 32px;
 }
 
 .latest-product {

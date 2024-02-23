@@ -43,6 +43,20 @@ export default function BestSellers() {
       title: "Room Flash Light",
       price: "$160.00",
     },
+    {
+      id: 5,
+      image: "./images/products/product5.png",
+      category: "Accessories",
+      title: "Man Office Bag",
+      price: "$110.00",
+    },
+    {
+      id: 6,
+      image: "./images/products/product6.png",
+      category: "Kids Toy",
+      title: "Charging Car",
+      price: "$100.00",
+    }
   ];
 
   const settings = {

@@ -5,6 +5,7 @@ import "../styles/Slider.sass";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Link } from "react-router-dom";
 
 export default function SliderComponent() {
   const sliderImages = [
@@ -26,7 +27,6 @@ export default function SliderComponent() {
       title: "Wireless Headphone",
       category: "Accessories Item",
     },
-    
   ];
 
   const settings = {
@@ -64,21 +64,23 @@ export default function SliderComponent() {
   };
 
   return (
-      <Row >
+    <Container fluid  >
+      <Row style={{paddingInline:"14px"}}>
         <div className="banner-row-images">
           <Slider {...settings}>
             {sliderImages.map((item) => (
-              <div className="slider-info" key={item.id}>
+            <Link to="/productdetails"><div className="slider-info" key={item.id}>
                 <img src={item.image} alt="slide1" />
                 <div className="slide-overlay">
                   <h5>{item.title}</h5>
                   <p>{item.category}</p>
                 </div>
               </div>
+            </Link>
             ))}
           </Slider>
         </div>
       </Row>
-  
+    </Container>
   );
 }

@@ -30,9 +30,6 @@ export default function Header() {
               <Link to="/shopcategory">Shop</Link>
             </li>
             <li className="nav-item">
-              <Link to="/blog">Blog</Link>
-            </li>
-            <li className="nav-item">
               <Link to="/pages">Pages</Link>
             </li>
             <li className="nav-item">
@@ -47,7 +44,7 @@ export default function Header() {
             </li>
             <li className="nav-item">
               <div className="shopping-basket">1</div>
-              <TfiShoppingCart style={{ color: "#222", fontSize: "18px", cursor:"pointer" }} />
+              <Link to="/shoppingcart"><TfiShoppingCart style={{ color: "#222", fontSize: "18px", cursor:"pointer" }} /></Link>
             </li>
             <li className="nav-item">
               <button>Buy Now</button>

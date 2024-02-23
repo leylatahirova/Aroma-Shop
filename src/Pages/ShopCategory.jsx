@@ -5,7 +5,7 @@ import Footer from "../Components/Footer";
 import Subscribe from '../Components/Subscribe';
 import TopProducts from '../Components/Shop/TopProducts';
 import CategoryAndFilter from '../Components/Shop/CategoryAndFilter';
-// import "../styles/ShopCategory.sass";
+
 
 export default function Shop() {
   return (
