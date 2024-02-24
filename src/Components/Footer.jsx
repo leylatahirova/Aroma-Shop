@@ -97,7 +97,7 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-            <div style={{display:"flex", justifyContent:"center",alignContent:"center"}}>
+            <div style={{display:"flex", justifyContent:"center",alignContent:"center", marginTop:"130px"}}>
                 <p style={{color:"#fff"}}>
                      Copyright ©2024 All rights reserved | This template is made with <FaHeart />  by <span style={{color:"#384aeb"}}>Colorlib</span>
                  </p>

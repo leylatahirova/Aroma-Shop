@@ -48,7 +48,7 @@ export default function ProductDetails() {
                 Quantity:
                 <input type="number" defaultValue={1}></input>
               </label>
-              <Button variant="primary" onClick={handleShow}>Add to cart</Button>
+              <Button style={{backgroundColor:"#495DED"}} variant="primary" onClick={handleShow}>Add to cart</Button>
               <div className="product__icon">
                 <div className="product__icon1">
                   <IoDiamondOutline />
@@ -77,8 +77,8 @@ export default function ProductDetails() {
                 </div>
               </div>
               <div className="product__button">
-                <Link to="/productcheckout"><Button variant="primary" >Checkout</Button></Link>
-                <Link to="/shoppingcart"><Button variant="primary" >View cart</Button></Link>
+                <Link to="/productcheckout"><Button style={{backgroundColor:"#495DED"}} variant="primary" >Checkout</Button></Link>
+                <Link to="/shoppingcart"><Button style={{backgroundColor:"#495DED"}} variant="primary" >View cart</Button></Link>
               </div>
             </div>
         </Offcanvas.Body>

@@ -7,6 +7,7 @@ import ShopCategory from "./Pages/ShopCategory";
 import ProductDetails from "./Pages/ProductDetails";
 import ShoppingCart from "./Pages/ShoppingCart";
 import ProductCheckout from "./Pages/ProductCheckout";
+import LoginRegister from "./Pages/LoginRegister";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -29,6 +30,7 @@ function App() {
         <Route path="/productdetails" element={<ProductDetails />} />
         <Route path="/shoppingcart" element={<ShoppingCart />} />
         <Route path="/productcheckout" element={<ProductCheckout />} />
+        <Route path="/loginregister" element={<LoginRegister />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </BrowserRouter>

@@ -49,6 +49,8 @@ export default function CategoryAndFilter() {
       category: "Decor",
       title: "Room Flash Light",
       price: "$160.00",
+      brand: "Apple",
+      color: "Black",
     },
     {
       id: 4,
@@ -56,6 +58,8 @@ export default function CategoryAndFilter() {
       category: "Decor",
       title: "Room Flash Light",
       price: "$190.00",
+      brand: "Apple",
+      color: "Black",
     },
     {
       id: 5,
@@ -63,6 +67,8 @@ export default function CategoryAndFilter() {
       category: "Accessories",
       title: "Man Office Bag",
       price: "$110.00",
+      brand: "Apple",
+      color: "Black",
     },
     {
       id: 6,
@@ -70,6 +76,8 @@ export default function CategoryAndFilter() {
       category: "Kids Toy",
       title: "Charging Car",
       price: "$100.00",
+      brand: "Apple",
+      color: "Black",
     },
     {
       id: 7,
@@ -77,6 +85,8 @@ export default function CategoryAndFilter() {
       category: "Electronics",
       title: "Blutooth Speaker",
       price: "$120.00",
+      brand: "Asus",
+      color: "Black",
     },
     {
       id: 8,
@@ -84,6 +94,8 @@ export default function CategoryAndFilter() {
       category: "Electronics",
       title: "Charging Car",
       price: "$160.00",
+      brand: "Micromax",
+      color: "White",
     },
     {
       id: 9,
@@ -91,6 +103,8 @@ export default function CategoryAndFilter() {
       category: "Accessories",
       title: "Architecture Book",
       price: "$160.00",
+      brand: "Gionee ",
+      color: "Spacegrey",
     },
     {
       id: 10,
@@ -98,6 +112,8 @@ export default function CategoryAndFilter() {
       category: "Beauty",
       title: "Tallow Cream",
       price: "$160.00",
+      brand: "Apple",
+      color: "Black",
     },
     {
       id: 11,
@@ -105,6 +121,8 @@ export default function CategoryAndFilter() {
       category: "Beauty",
       title: "Yuzu Organic Soap",
       price: "$180.00",
+      brand: "Apple",
+      color: "Black",
     },
     {
       id: 12,
@@ -112,6 +130,8 @@ export default function CategoryAndFilter() {
       category: "Accessories",
       title: "Workout Bottle (16oz)",
       price: "$160.00",
+      brand: "Apple",
+      color: "Black",
     },
     {
       id: 13,
@@ -119,6 +139,8 @@ export default function CategoryAndFilter() {
       category: "Accessories",
       title: "Signet Ring — 5mm",
       price: "$160.00",
+      brand: "Apple",
+      color: "Black",
     },
     {
       id: 14,
@@ -126,6 +148,8 @@ export default function CategoryAndFilter() {
       category: "Accessories",
       title: "iPhone Xs — Case",
       price: "$190.00",
+      brand: "Apple",
+      color: "Black",
     },
     {
       id: 15,
@@ -133,6 +157,8 @@ export default function CategoryAndFilter() {
       category: "Accessories",
       title: "Minimalist wallet",
       price: "$130.00",
+      brand: "Apple",
+      color: "Black",
     },
   ];
 
@@ -148,9 +174,7 @@ export default function CategoryAndFilter() {
     }
     return true;
   });
-  // const filteredProducts = selectedCategory
-  //   ? products.filter((product) => product.category === selectedCategory)
-  //   : products;
+
 
   return (
     <Container style={{ paddingInline: "80px" }}>
@@ -224,46 +248,96 @@ export default function CategoryAndFilter() {
               <ul>
                 <span>Brands</span>
                 <li>
-                  <input type="radio" id="apple" />
+                  <input 
+                    type="radio" 
+                    id="apple" 
+                    checked={selectedBrand === "apple"}
+                    onChange={() => handleBrandChange("apple")}
+                  />
                   <label>Apple (12)</label>
                 </li>
                 <li>
-                  <input type="radio" id="asus" />
+                  <input 
+                    type="radio" 
+                    id="asus" 
+                    checked={selectedBrand === "asus"}
+                    onChange={() => handleBrandChange("asus")}
+                    />
                   <label>Asus (23)</label>
                 </li>
                 <li>
-                  <input type="radio" id="gionee" />
+                  <input 
+                    type="radio"
+                    id="gionee"
+                    checked={selectedBrand === "gionee"}
+                    onChange={() => handleBrandChange("gionee")}
+                  />
                   <label>Gionee (34)</label>
                 </li>
                 <li>
-                  <input type="radio" id="micromax" />
+                  <input 
+                    type="radio"
+                    id="micromax"
+                    checked={selectedBrand === "micromax"}
+                    onChange={() => handleBrandChange("micromax")}
+                  />
                   <label>Micromax (12)</label>
                 </li>
                 <li>
-                  <input type="radio" id="samsung" />
+                  <input 
+                    type="radio"
+                    id="samsung"
+                    checked={selectedBrand === "samsung"}
+                    onChange={() => handleBrandChange("samsung")}
+                  />
                   <label>Samsung (54)</label>
                 </li>
               </ul>
               <ul>
                 <span>Color</span>
                 <li>
-                  <input type="radio" id="black" />
+                  <input 
+                    type="radio"
+                    id="Black"
+                    checked={selectedColor === "black"}
+                    onChange={() => handleColorChange("black")}
+                  />
                   <label>Black (22)</label>
                 </li>
                 <li>
-                  <input type="radio" id="blackLeather" />
+                  <input 
+                    type="radio"
+                    id="Black Leather "
+                    checked={selectedColor === "Black Leather "}
+                    onChange={() => handleColorChange("Black Leather ")}
+                  />
                   <label>Black Leather (64)</label>
                 </li>
                 <li>
-                  <input type="radio" id="red" />
-                  <label>Black with red (23)</label>
+                  <input 
+                    type="radio"
+                    id="White"
+                    checked={selectedColor === "White"}
+                    onChange={() => handleColorChange("White")}
+                  />
+                  <label>White (23)</label>
                 </li>
                 <li>
-                  <input type="radio" id="gold" />
+                  <input 
+                    type="radio"
+                    id="gold"
+                    checked={selectedColor === "gold"}
+                    onChange={() => handleColorChange("gold")}
+                  />
                   <label>Gold (34)</label>
                 </li>
                 <li>
-                  <input type="radio" id="spacegrey" />
+                  <input 
+                    type="radio"
+                    id="spacegrey"
+                    checked={selectedColor === "spacegrey"}
+                    onChange={() => handleColorChange("spacegrey")}
+                  />
                   <label>Spacegrey (56)</label>
                 </li>
               </ul>
