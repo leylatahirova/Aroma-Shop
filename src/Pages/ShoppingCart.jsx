@@ -3,6 +3,7 @@ import Header from "../Components/Header";
 import PagesBanner from "../Components/PagesBanner";
 import Footer from "../Components/Footer";
 import Button from "../Components/Button";
+import { MdDeleteOutline } from "react-icons/md";
 
 export default function ShoppingCart() {
   const cartProducts = [
@@ -71,6 +72,10 @@ export default function ShoppingCart() {
                   <td>
                     <h5>{cartItem.total}</h5>
                   </td>
+                  <td>
+                     <MdDeleteOutline style={{fontSize:"20px"}} />
+                  </td>
+                  
                 </tr>
               </tbody>
                 ))}
@@ -90,7 +95,6 @@ export default function ShoppingCart() {
                         </td>
                     </tr>
                 </tbody>
-
             </table>
           </div>
         </div>

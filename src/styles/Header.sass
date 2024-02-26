@@ -10,11 +10,9 @@ ul
         color: #384aeb
       &:active
         color: #384aeb
-    @media(max-width: 1024px)
-      display: none
 
-.navbar1
-  display: flex
+
+  
   .nav-item
     position: relative
     button
@@ -30,6 +28,8 @@ ul
         opacity: 0.8
         background-color: rgba(255, 255, 255, 0.8)
         transition: all .4s ease
+  @media(max-width: 1024px)
+    display: none
 
 .header
   padding-inline: 120px
@@ -40,7 +40,24 @@ ul
   box-shadow: 0px 10px 27px 3px rgba(221,221,221,0.3)
   z-index: 9999
   @media(max-width: 1024px)
-      padding-inline: 20px
+    padding-inline: 20px
+
+    .logo
+      display: flex
+      justify-content: space-between
+      
+      
+.header__nav
+  display: flex
+  justify-content: space-around
+  margin: 0 auto
+  max-width: 1200px
+
+  .hamburgerMenu
+    display: none
+    @media(max-width: 1024px)
+      display: block
+      
 
 .shopping-basket
   background-color: #384aeb

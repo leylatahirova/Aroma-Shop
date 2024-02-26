@@ -17,11 +17,11 @@ export default function CategoryAndFilter() {
   };
 
   const handleBrandChange = (brand) => {
-    setSelectedBrand(brand === "all" ? "" : brand);
+    setSelectedBrand(brand.toLowerCase() === "all" ? "" : brand.toLowerCase());
   };
-
+  
   const handleColorChange = (color) => {
-    setSelectedColor(color === "all" ? "" : color);
+    setSelectedColor(color.toLowerCase() === "all" ? "" : color.toLowerCase());
   };
 
   const products = [
@@ -31,7 +31,7 @@ export default function CategoryAndFilter() {
       category: "Accessories",
       title: "Quartz Belt Watch",
       price: "$150.00",
-      brand: "Apple",
+      brand: "Samsung",
       color: "Black",
     },
     {
@@ -41,7 +41,7 @@ export default function CategoryAndFilter() {
       title: "Women Freshwash",
       price: "$140.00",
       brand: "Asus",
-      color: "Black",
+      color: "White",
     },
     {
       id: 3,
@@ -49,8 +49,8 @@ export default function CategoryAndFilter() {
       category: "Decor",
       title: "Room Flash Light",
       price: "$160.00",
-      brand: "Apple",
-      color: "Black",
+      brand: "Micromax",
+      color: "White",
     },
     {
       id: 4,
@@ -58,7 +58,7 @@ export default function CategoryAndFilter() {
       category: "Decor",
       title: "Room Flash Light",
       price: "$190.00",
-      brand: "Apple",
+      brand: "Gionee",
       color: "Black",
     },
     {
@@ -67,8 +67,8 @@ export default function CategoryAndFilter() {
       category: "Accessories",
       title: "Man Office Bag",
       price: "$110.00",
-      brand: "Apple",
-      color: "Black",
+      brand: "Micromax",
+      color: "blackLeather",
     },
     {
       id: 6,
@@ -76,8 +76,8 @@ export default function CategoryAndFilter() {
       category: "Kids Toy",
       title: "Charging Car",
       price: "$100.00",
-      brand: "Apple",
-      color: "Black",
+      brand: "Gionee",
+      color: "White",
     },
     {
       id: 7,
@@ -112,7 +112,7 @@ export default function CategoryAndFilter() {
       category: "Beauty",
       title: "Tallow Cream",
       price: "$160.00",
-      brand: "Apple",
+      brand: "Micromax ",
       color: "Black",
     },
     {
@@ -121,7 +121,7 @@ export default function CategoryAndFilter() {
       category: "Beauty",
       title: "Yuzu Organic Soap",
       price: "$180.00",
-      brand: "Apple",
+      brand: "Micromax ",
       color: "Black",
     },
     {
@@ -139,8 +139,8 @@ export default function CategoryAndFilter() {
       category: "Accessories",
       title: "Signet Ring — 5mm",
       price: "$160.00",
-      brand: "Apple",
-      color: "Black",
+      brand: "Gionee",
+      color: "Gold",
     },
     {
       id: 14,
@@ -166,14 +166,15 @@ export default function CategoryAndFilter() {
     if (selectedCategory && product.category !== selectedCategory) {
       return false;
     }
-    if (selectedBrand && product.brand !== selectedBrand) {
+    if (selectedBrand && product.brand.toLowerCase() !== selectedBrand) {
       return false;
     }
-    if (selectedColor && product.color !== selectedColor) {
+    if (selectedColor && product.color.toLowerCase() !== selectedColor) {
       return false;
     }
     return true;
   });
+  
 
 
   return (
@@ -298,7 +299,7 @@ export default function CategoryAndFilter() {
                 <li>
                   <input 
                     type="radio"
-                    id="Black"
+                    id="black"
                     checked={selectedColor === "black"}
                     onChange={() => handleColorChange("black")}
                   />
@@ -307,18 +308,18 @@ export default function CategoryAndFilter() {
                 <li>
                   <input 
                     type="radio"
-                    id="Black Leather "
-                    checked={selectedColor === "Black Leather "}
-                    onChange={() => handleColorChange("Black Leather ")}
+                    id="blackLeather"
+                    checked={selectedColor === "blackLeather"}
+                    onChange={() => handleColorChange("blackLeather")}
                   />
                   <label>Black Leather (64)</label>
                 </li>
                 <li>
                   <input 
                     type="radio"
-                    id="White"
-                    checked={selectedColor === "White"}
-                    onChange={() => handleColorChange("White")}
+                    id="white"
+                    checked={selectedColor === "white"}
+                    onChange={() => handleColorChange("white")}
                   />
                   <label>White (23)</label>
                 </li>

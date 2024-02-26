@@ -9,7 +9,7 @@ import { FaHeart } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <Container fluid style={{backgroundColor:"#002347", paddingTop:"180px", paddingInline:"100px", paddingBottom:"40px"}}>
+    <Container className='footer' fluid>
         <Row style={{margin:"0 auto", maxWidth:"1200px" }}>
             <div className='col-lg-3 col-md-6 col-sm-6'>
                 <div className='footer-about'>
@@ -102,7 +102,7 @@ export default function Footer() {
                      Copyright ©2024 All rights reserved | This template is made with <FaHeart />  by <span style={{color:"#384aeb"}}>Colorlib</span>
                  </p>
             </div>
-        </Row>
+         </Row> 
     </Container>
   )
 }
