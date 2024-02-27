@@ -6,10 +6,12 @@ import { TfiShoppingCart } from "react-icons/tfi";
 import "../styles/Header.sass";
 import { Link } from "react-router-dom";
 import CartSidebar from "./Shop/CartSidebar";
+// import MobileMenu from "./MobileMenu";
 
 export default function Header() {
   const [showCartSidebar, setShowCartSidebar] = useState(false);
   const handleCloseCartSidebar = () => setShowCartSidebar(false);
+  
 
   
 
@@ -24,6 +26,7 @@ export default function Header() {
             className="hamburgerMenu"
             style={{ color: "#384aeb", fontSize: "26px" }}
           />
+          {/* <MobileMenu/> */}
         </div>
         <div className="navbar1">
           <ul>
