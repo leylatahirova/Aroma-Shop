@@ -38,7 +38,7 @@ function CartSidebar({ show, handleClose }) {
                   <p>Category: {productItem.category}</p>
                   <p>{productItem.price}</p>
                 </div>
-                <MdDeleteOutline style={{fontSize:"20px",}} onClick={() => handleRemoveFromCart(productItem.id)} />
+                <MdDeleteOutline style={{fontSize:"20px", cursor:"pointer", marginLeft:"10px"}} onClick={() => handleRemoveFromCart(productItem.id)} />
               </div>
             </div>
           ))}

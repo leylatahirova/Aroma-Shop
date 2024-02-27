@@ -6,13 +6,13 @@ import { TfiShoppingCart } from "react-icons/tfi";
 import "../styles/Header.sass";
 import { Link } from "react-router-dom";
 import CartSidebar from "./Shop/CartSidebar";
+import { useSelector } from "react-redux";
 // import MobileMenu from "./MobileMenu";
 
 export default function Header() {
+  const cartItemCount = useSelector((state) => state.cart.length);
   const [showCartSidebar, setShowCartSidebar] = useState(false);
   const handleCloseCartSidebar = () => setShowCartSidebar(false);
-  
-
   
 
   return (
@@ -22,10 +22,10 @@ export default function Header() {
           <Link to="/home">
             <img src="./images/logo.png.png" alt="logo" />
           </Link>
-          <GiHamburgerMenu
+          {/* <GiHamburgerMenu
             className="hamburgerMenu"
             style={{ color: "#384aeb", fontSize: "26px" }}
-          />
+          /> */}
           {/* <MobileMenu/> */}
         </div>
         <div className="navbar1">
@@ -49,7 +49,7 @@ export default function Header() {
               />
             </li>
             <li className="nav-item">
-              <div className="shopping-basket">3</div>
+              <div className="shopping-basket">{cartItemCount}</div>
               <TfiShoppingCart
                 onClick={() => setShowCartSidebar(true)}
                 style={{ color: "#222", fontSize: "18px", cursor: "pointer" }}

@@ -13,17 +13,19 @@ import { useDispatch, useSelector } from "react-redux";
 
 
 export default function Product() {
-  const [currentPage, setCurrentPage] = useState(1);
-  const [currentProducts, setCurrentProducts] = useState([]);
-  const productsPerPage = 8;
-
   const dispatch = useDispatch();
   const products = useSelector((state) => state.products);
+
 
   const handleAddToCart = (productItem) => {
     dispatch(addToCart(productItem));
   };
 
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const [currentProducts, setCurrentProducts] = useState([]);
+  const productsPerPage = 8;
+  
   useEffect(() => {
     const indexOfLastProduct = currentPage * productsPerPage;
     const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
@@ -37,6 +39,8 @@ export default function Product() {
   const handlePageChange = (event, page) => {
     setCurrentPage(page);
   };
+
+
 
   return (
     <Container
@@ -67,7 +71,9 @@ export default function Product() {
                   <div className="icon">
                     <GiShoppingCart
                       style={{ color: "#fff", fontSize: "20px" }}
-                      onClick={() => handleAddToCart(productItem)}
+                      onClick={() => {
+                        handleAddToCart(productItem)
+                      }}
                     />
                   </div>
                   <div className="icon">

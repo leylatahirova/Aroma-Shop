@@ -1,37 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../Components/Header";
 import PagesBanner from "../Components/PagesBanner";
 import Footer from "../Components/Footer";
 import Button from "../Components/Button";
 import { MdDeleteOutline } from "react-icons/md";
+import { useDispatch } from 'react-redux';
+import { removeFromCart } from "../redux/actions";
+import { useSelector } from 'react-redux';
+import { Link } from "react-router-dom";
 
 export default function ShoppingCart() {
-  const cartProducts = [
-    {
-      id: 1,
-      image: "./images/shop/cart1.png",
-      title: "Minimalistic shop for multipurpose use",
-      price: "$360.00",
-      quantity: "2",
-      total: "$720.00",
-    },
-    {
-      id: 2,
-      image: "./images/shop/cart2.png",
-      title: "Minimalistic shop for multipurpose use",
-      price: "$360.00",
-      quantity: "2",
-      total: "$720.00",
-    },
-    {
-      id: 3,
-      image: "./images/shop/cart3.png",
-      title: "Minimalistic shop for multipurpose use",
-      price: "$360.00",
-      quantity: "2",
-      total: "$720.00",
-    },
-  ];
+
+  const cartItems = useSelector(state => state.cart);
+  const dispatch = useDispatch();
+
+  const handleRemoveFromCart = (productId) => {
+    dispatch(removeFromCart(productId));
+  };
+ 
   return (
     <>
       <Header />
@@ -48,21 +34,24 @@ export default function ShoppingCart() {
                   <th>Total</th>
                 </tr>
               </thead>
-              {cartProducts.map((cartItem)=> (
-              <tbody key={cartItem.id}>
+              {cartItems.map((productItem, index)=> (
+              <tbody key={productItem.id}>
                 <tr>
                   <td>
                     <div className="cart__area__image">
+                    <Link to="/productdetails">
                       <div>
-                        <img src={cartItem.image} alt="cart1" />
+                        <img src={productItem.image} alt="cart1" />
                       </div>
+                      </Link>
                       <div>
-                        <p>{cartItem.title}</p>
+                        <p>{productItem.title}</p>
                       </div>
                     </div>
+                  
                   </td>
                   <td>
-                    <h5>{cartItem.price}</h5>
+                    <h5>{productItem.price}</h5>
                   </td>
                   <td>
                     <div>
@@ -70,10 +59,10 @@ export default function ShoppingCart() {
                     </div>
                   </td>
                   <td>
-                    <h5>{cartItem.total}</h5>
+                    <h5>{productItem.total}</h5>
                   </td>
                   <td>
-                     <MdDeleteOutline style={{fontSize:"20px"}} />
+                  <MdDeleteOutline style={{fontSize:"20px",}} onClick={() => handleRemoveFromCart(productItem.id)} />
                   </td>
                   
                 </tr>

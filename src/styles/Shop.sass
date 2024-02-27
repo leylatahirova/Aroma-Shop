@@ -20,7 +20,7 @@
         padding-left: 15px
         outline: none
         position: relative
-        margin-left: 370px
+
     .input__search
         cursor: pointer
         color: #999999
@@ -34,8 +34,15 @@
 
     &::placeholder
         color: #999999
+    @media(max-width: 768px)
+        display: none
 
 // Product-details
+.product__img
+    img
+        @media(max-width: 768px)
+             width: 300px
+
 .product__row
     display: flex
     justify-content: center
@@ -95,8 +102,6 @@
             background-color: #fff
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px
 
-
-
 .close__button
     margin-top: 90px
 .canvas
@@ -114,7 +119,7 @@
             margin-right: 20px
     .product__button
         background-color: #fff
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px
         padding: 20px 86px
         position: fixed
         display: flex
@@ -150,8 +155,8 @@
             label
                 padding-left: 10px
 
-.latest-product
-    width: 860px
+// .latest-product
+//     width: 860px
 
 // Shopping-Cart
 .cart__area_thead
@@ -160,7 +165,7 @@
         font-weight: 500
         font-family: "Oswald",sans-serif
         color: #222
-       
+
         padding-bottom: 15px
 
 .cart__area__image
@@ -169,8 +174,8 @@
     justify-content: center
     align-items: center
     img
+        width: 150px
         padding-right: 20px
-        
 
 tbody
     border-top: 1px solid #EEEEEE
@@ -182,7 +187,7 @@ tbody
             margin-right: 2px
             margin-top: 20px
             margin-bottom: 20px
-            
+
     input
         outline: none
         border: 1px solid #eee

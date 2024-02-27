@@ -6,8 +6,22 @@ import { IoIosSearch } from "react-icons/io";
 import { GiShoppingCart } from "react-icons/gi";
 import { CiHeart } from "react-icons/ci";
 import { Link } from "react-router-dom";
+import CartSidebar from "./CartSidebar";
+import { addToCart } from "../../redux/actions";
+import { useDispatch, useSelector } from "react-redux";
 
 export default function CategoryAndFilter() {
+  const dispatch = useDispatch();
+  const products = useSelector((state) => state.products);
+
+  const [showCartSidebar, setShowCartSidebar] = useState(false);
+
+  const handleAddToCart = (productItem) => {
+    dispatch(addToCart(productItem));
+    setShowCartSidebar(true);
+  };
+
+
   const [selectedCategory, setSelectedCategory] = useState("");
   const [selectedBrand, setSelectedBrand] = useState("");
   const [selectedColor, setSelectedColor] = useState("");
@@ -17,159 +31,23 @@ export default function CategoryAndFilter() {
   };
 
   const handleBrandChange = (brand) => {
-    setSelectedBrand(brand.toLowerCase() === "all" ? "" : brand.toLowerCase());
+    setSelectedBrand(brand === "all" ? "" : brand);
   };
   
   const handleColorChange = (color) => {
-    setSelectedColor(color.toLowerCase() === "all" ? "" : color.toLowerCase());
+    setSelectedColor(color === "all" ? "" : color);
   };
 
-  const products = [
-    {
-      id: 1,
-      image: "./images/products/product1.png",
-      category: "Accessories",
-      title: "Quartz Belt Watch",
-      price: "$150.00",
-      brand: "Samsung",
-      color: "Black",
-    },
-    {
-      id: 2,
-      image: "./images/products/product2.png",
-      category: "Beauty",
-      title: "Women Freshwash",
-      price: "$140.00",
-      brand: "Asus",
-      color: "White",
-    },
-    {
-      id: 3,
-      image: "./images/products/product3.png",
-      category: "Decor",
-      title: "Room Flash Light",
-      price: "$160.00",
-      brand: "Micromax",
-      color: "White",
-    },
-    {
-      id: 4,
-      image: "./images/products/product4.png",
-      category: "Decor",
-      title: "Room Flash Light",
-      price: "$190.00",
-      brand: "Gionee",
-      color: "Black",
-    },
-    {
-      id: 5,
-      image: "./images/products/product5.png",
-      category: "Accessories",
-      title: "Man Office Bag",
-      price: "$110.00",
-      brand: "Micromax",
-      color: "blackLeather",
-    },
-    {
-      id: 6,
-      image: "./images/products/product6.png",
-      category: "Kids Toy",
-      title: "Charging Car",
-      price: "$100.00",
-      brand: "Gionee",
-      color: "White",
-    },
-    {
-      id: 7,
-      image: "./images/products/product7.png",
-      category: "Electronics",
-      title: "Blutooth Speaker",
-      price: "$120.00",
-      brand: "Asus",
-      color: "Black",
-    },
-    {
-      id: 8,
-      image: "./images/products/product8.png",
-      category: "Electronics",
-      title: "Charging Car",
-      price: "$160.00",
-      brand: "Micromax",
-      color: "White",
-    },
-    {
-      id: 9,
-      image: "./images/products/product9.png",
-      category: "Accessories",
-      title: "Architecture Book",
-      price: "$160.00",
-      brand: "Gionee ",
-      color: "Spacegrey",
-    },
-    {
-      id: 10,
-      image: "./images/products/product10.png",
-      category: "Beauty",
-      title: "Tallow Cream",
-      price: "$160.00",
-      brand: "Micromax ",
-      color: "Black",
-    },
-    {
-      id: 11,
-      image: "./images/products/product11.png",
-      category: "Beauty",
-      title: "Yuzu Organic Soap",
-      price: "$180.00",
-      brand: "Micromax ",
-      color: "Black",
-    },
-    {
-      id: 12,
-      image: "./images/products/product12.png",
-      category: "Accessories",
-      title: "Workout Bottle (16oz)",
-      price: "$160.00",
-      brand: "Apple",
-      color: "Black",
-    },
-    {
-      id: 13,
-      image: "./images/products/product13.png",
-      category: "Accessories",
-      title: "Signet Ring — 5mm",
-      price: "$160.00",
-      brand: "Gionee",
-      color: "Gold",
-    },
-    {
-      id: 14,
-      image: "./images/products/product14.png",
-      category: "Accessories",
-      title: "iPhone Xs — Case",
-      price: "$190.00",
-      brand: "Apple",
-      color: "Black",
-    },
-    {
-      id: 15,
-      image: "./images/products/product15.png",
-      category: "Accessories",
-      title: "Minimalist wallet",
-      price: "$130.00",
-      brand: "Apple",
-      color: "Black",
-    },
-  ];
+  
 
   const filteredProducts = products.filter((product) => {
     if (selectedCategory && product.category !== selectedCategory) {
       return false;
     }
-    if (selectedBrand && product.brand.toLowerCase() !== selectedBrand) {
+    if (selectedBrand && product.brand !== selectedBrand) {
       return false;
     }
-    if (selectedColor && product.color.toLowerCase() !== selectedColor) {
+    if (selectedColor && product.color !== selectedColor) {
       return false;
     }
     return true;
@@ -178,8 +56,9 @@ export default function CategoryAndFilter() {
 
 
   return (
-    <Container style={{ paddingInline: "80px" }}>
-      <Row>
+    <section className="section-margin--small mb-5">
+    <div className="container" style={{ paddingInline: "80px" }}>
+      <div className="row">
         <div className="col-xl-3 col-lg-4 col-md-5">
           <div className="sidebar-categories">
             <div className="sidebar-list">Browse Categories</div>
@@ -249,6 +128,16 @@ export default function CategoryAndFilter() {
               <ul>
                 <span>Brands</span>
                 <li>
+                  <input
+                    className="input-radio"
+                    type="radio"
+                    id="all"
+                    checked={!selectedBrand}
+                    onChange={() => handleBrandChange("all")}
+                  />
+                  <label>All (15)</label>
+                </li>
+                <li>
                   <input 
                     type="radio" 
                     id="apple" 
@@ -297,6 +186,16 @@ export default function CategoryAndFilter() {
               <ul>
                 <span>Color</span>
                 <li>
+                  <input
+                    className="input-radio"
+                    type="radio"
+                    id="all"
+                    checked={!selectedColor}
+                    onChange={() => handleColorChange("all")}
+                  />
+                  <label>All (15)</label>
+                </li>
+                <li>
                   <input 
                     type="radio"
                     id="black"
@@ -342,7 +241,7 @@ export default function CategoryAndFilter() {
                   <label>Spacegrey (56)</label>
                 </li>
               </ul>
-              <ul>
+              {/* <ul>
                 <span>Price</span>
                 <input
                   type="range"
@@ -351,7 +250,7 @@ export default function CategoryAndFilter() {
                   min="0"
                   max="1000"
                 />
-              </ul>
+              </ul> */}
             </div>
           </div>
         </div>
@@ -401,6 +300,9 @@ export default function CategoryAndFilter() {
                       </div>
                       <div className="icon">
                         <GiShoppingCart
+                        onClick={() => {
+                          handleAddToCart(productItem)
+                        }}
                           style={{ color: "#fff", fontSize: "20px" }}
                         />
                       </div>
@@ -422,7 +324,8 @@ export default function CategoryAndFilter() {
             </div>
           </section>
         </div>
-      </Row>
-    </Container>
+      </div>
+    </div>
+    </section>
   );
 }

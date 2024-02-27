@@ -1,7 +1,7 @@
 import React from "react";
-import "../../styles/TopProducts.sass";
-import TopProductsCol from "./TopProductsCol";
+import { Link } from "react-router-dom";
 import { Container } from "react-bootstrap";
+import "../../styles/TopProducts.sass";
 
 export default function TopProducts() {
   const topProductsData = [
@@ -65,29 +65,30 @@ export default function TopProducts() {
         price: "$170.00",
       },
     ],
-    [
-      {
-        id: 10,
-        image: "./images/shop/product-sm-2.png",
-        title: "Gray Coffee Cup",
-        price: "$170.00",
-      },
-      {
-        id: 11,
-        image: "./images/shop/product-sm-4.png",
-        title: "Gray Coffee Cup",
-        price: "$170.00",
-      },
-      {
-        id: 12,
-        image: "./images/shop/product-sm-7.png",
-        title: "Gray Coffee Cup",
-        price: "$170.00",
-      },
-    ],
+    // [
+    //   {
+    //     id: 10,
+    //     image: "./images/shop/product-sm-2.png",
+    //     title: "Gray Coffee Cup",
+    //     price: "$170.00",
+    //   },
+    //   {
+    //     id: 11,
+    //     image: "./images/shop/product-sm-4.png",
+    //     title: "Gray Coffee Cup",
+    //     price: "$170.00",
+    //   },
+    //   {
+    //     id: 12,
+    //     image: "./images/shop/product-sm-7.png",
+    //     title: "Gray Coffee Cup",
+    //     price: "$170.00",
+    //   },
+    // ],
   ];
+
   return (
-    <Container style={{paddingInline:"80px"}}>
+    <Container style={{ paddingInline: "80px" }}>
       <div className="top-products">
         <div className="container">
           <div className="top-products__text">
@@ -96,9 +97,21 @@ export default function TopProducts() {
               Top<span> Product</span>
             </h2>
           </div>
-          <div style={{ display: "flex" }}>
+          <div style={{ display: "flex", flexWrap:"wrap" }}>
             {topProductsData.map((group, index) => (
-              <TopProductsCol key={index} products={group} />
+              <div className="top-products__item" key={index}>
+                {group.map((product) => (
+                  <div className="top-products__products" key={product.id}>
+                    <Link to="../productdetails">
+                      <img src={product.image} alt="product" />
+                    </Link>
+                    <div>
+                      <Link to="../productdetails">{product.title}</Link>
+                      <p>{product.price}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             ))}
           </div>
         </div>

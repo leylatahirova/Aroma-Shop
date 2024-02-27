@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Header from "../Components/Header";
 import PagesBanner from "../Components/PagesBanner";
 import TopProducts from "../Components/Shop/TopProducts";
@@ -7,12 +7,19 @@ import "../styles/Shop.sass";
 import { Container, Row, Col } from "react-bootstrap";
 import { IoDiamondOutline } from "react-icons/io5";
 import { IoMdHeartEmpty } from "react-icons/io";
-import Button from 'react-bootstrap/Button';
-import CartSidebar from "../Components/Shop/CartSidebar";
+import Button from "react-bootstrap/Button";
+import { Link } from "react-router-dom";
+// import { addToCart } from "../redux/actions";
+// import { useDispatch, useSelector } from "react-redux";
 
 export default function ProductDetails() {
-  const [showCartSidebar, setShowCartSidebar] = useState(false);
-  const handleCloseCartSidebar = () => setShowCartSidebar(false);
+  // const dispatch = useDispatch();
+  // const products = useSelector((state) => state.products);
+
+  // const handleAddToCart = (productItem) => {
+  //   dispatch(addToCart(productItem));
+  // };
+
   return (
     <>
       <Header />
@@ -46,7 +53,17 @@ export default function ProductDetails() {
                 Quantity:
                 <input type="number" defaultValue={1}></input>
               </label>
-              <Button style={{backgroundColor:"#495DED"}} variant="primary" onClick={() => setShowCartSidebar(true)}>Add to cart</Button>
+              <Link to="/shoppingcart">
+                <Button
+                  style={{ backgroundColor: "#495DED" }}
+                  variant="primary"
+                  // onClick={() => {
+                  //   handleAddToCart(productItem);
+                  // }}
+                >
+                  Add to cart
+                </Button>
+              </Link>
               <div className="product__icon">
                 <div className="product__icon1">
                   <IoDiamondOutline />
@@ -59,7 +76,6 @@ export default function ProductDetails() {
           </Col>
         </Row>
       </Container>
-      <CartSidebar show={showCartSidebar} handleClose={handleCloseCartSidebar} />
       <TopProducts />
       <Footer />
     </>

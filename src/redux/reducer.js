@@ -9,6 +9,8 @@ const initialState = {
           category: "Accessories",
           title: "Quartz Belt Watch",
           price: "$150.00",
+          brand: "samsung",
+          color: "black",
         },
         {
           id: 2,
@@ -16,6 +18,8 @@ const initialState = {
           category: "Beauty",
           title: "Women Freshwash",
           price: "$140.00",
+          brand: "gionee",
+          color: "white",
         },
         {
           id: 3,
@@ -23,6 +27,8 @@ const initialState = {
           category: "Decor",
           title: "Room Flash Light",
           price: "$160.00",
+          brand: "asus",
+          color: "white",
         },
         {
           id: 4,
@@ -30,6 +36,8 @@ const initialState = {
           category: "Decor",
           title: "Room Flash Light",
           price: "$190.00",
+          brand: "micromax",
+          color: "black",
         },
         {
           id: 5,
@@ -37,6 +45,8 @@ const initialState = {
           category: "Accessories",
           title: "Man Office Bag",
           price: "$110.00",
+          brand: "apple",
+          color: "blackLeather",
         },
         {
           id: 6,
@@ -44,13 +54,17 @@ const initialState = {
           category: "Kids Toy",
           title: "Charging Car",
           price: "$100.00",
+          brand: "apple",
+          color: "black",
         },
         {
           id: 7,
           image: "./images/products/product7.png",
-          category: "Accessories",
+          category: "Electronics",
           title: "Blutooth Speaker",
           price: "$120.00",
+          brand: "apple",
+          color: "black",
         },
         {
           id: 8,
@@ -58,6 +72,8 @@ const initialState = {
           category: "Accessories",
           title: "Charging Car",
           price: "$160.00",
+          brand: "apple",
+          color: "black",
         },
         {
           id: 9,
@@ -65,6 +81,8 @@ const initialState = {
           category: "Accessories",
           title: "Architecture Book",
           price: "$160.00",
+          brand: "apple",
+          color: "spacegrey",
         },
         {
           id: 10,
@@ -72,6 +90,8 @@ const initialState = {
           category: "Beauty",
           title: "Tallow Cream",
           price: "$160.00",
+          brand: "apple",
+          color: "black",
         },
         {
           id: 11,
@@ -79,6 +99,8 @@ const initialState = {
           category: "Beauty",
           title: "Yuzu Organic Soap",
           price: "$180.00",
+          brand: "apple",
+          color: "black",
         },
         {
           id: 12,
@@ -86,6 +108,8 @@ const initialState = {
           category: "Accessories",
           title: "Workout Bottle (16oz)",
           price: "$160.00",
+          brand: "apple",
+          color: "black",
         },
         {
           id: 13,
@@ -93,6 +117,8 @@ const initialState = {
           category: "Accessories",
           title: "Signet Ring — 5mm",
           price: "$160.00",
+          brand: "apple",
+          color: "gold",
         },
         {
           id: 14,
@@ -100,6 +126,8 @@ const initialState = {
           category: "Accessories",
           title: "iPhone Xs — Case",
           price: "$190.00",
+          brand: "apple",
+          color: "black",
         },
         {
           id: 15,
@@ -107,6 +135,8 @@ const initialState = {
           category: "Accessories",
           title: "Minimalist wallet",
           price: "$130.00",
+          brand: "apple",
+          color: "black",
         },
         {
           id: 16,
@@ -114,6 +144,8 @@ const initialState = {
           category: "Accessories",
           title: "Hexagon Pen",
           price: "$140.00",
+          brand: "apple",
+          color: "black",
         },
       ],
       cart: [],

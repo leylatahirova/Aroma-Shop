@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef,useState } from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import { GoArrowLeft } from "react-icons/go";
@@ -11,54 +11,20 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import "../styles/BestSellers.sass";
 import { Link } from "react-router-dom";
+import { addToCart } from "../redux/actions";
+import { useDispatch, useSelector } from "react-redux";
 
 export default function BestSellers() {
-  const sliderRef = useRef(null);
-  const products = [
-    {
-      id: 1,
-      image: "/images/products/product1.png",
-      category: "Accessories",
-      title: "Quartz Belt Watch",
-      price: "$150.00",
-    },
-    {
-      id: 2,
-      image: "/images/products/product2.png",
-      category: "Beauty",
-      title: "Women Freshwash",
-      price: "$140.00",
-    },
-    {
-      id: 3,
-      image: "/images/products/product3.png",
-      category: "Decor",
-      title: "Room Flash Light",
-      price: "$160.00",
-    },
-    {
-      id: 4,
-      image: "/images/products/product4.png",
-      category: "Decor",
-      title: "Room Flash Light",
-      price: "$160.00",
-    },
-    {
-      id: 5,
-      image: "./images/products/product5.png",
-      category: "Accessories",
-      title: "Man Office Bag",
-      price: "$110.00",
-    },
-    {
-      id: 6,
-      image: "./images/products/product6.png",
-      category: "Kids Toy",
-      title: "Charging Car",
-      price: "$100.00",
-    }
-  ];
+  const dispatch = useDispatch();
+  const products = useSelector((state) => state.products);
+  const [showCartSidebar, setShowCartSidebar] = useState(false);
 
+  const handleAddToCart = (productItem) => {
+    dispatch(addToCart(productItem));
+    setShowCartSidebar(true);
+  };
+  const sliderRef = useRef(null);
+  
   const settings = {
     slidesToShow: 4,
     slidesToScroll: 1,
@@ -123,7 +89,11 @@ export default function BestSellers() {
                       <IoIosSearch style={{ color: "#fff", fontSize: "20px"}}/>
                     </div>
                     <div className="icon">
-                      <GiShoppingCart style={{ color: "#fff", fontSize: "20px"}}/>
+                      <GiShoppingCart style={{ color: "#fff", fontSize: "20px"}}
+                        onClick={() => {
+                        handleAddToCart(productItem)
+                      }}
+                      />
                     </div>
                     <div className="icon">
                       <CiHeart style={{ color: "#fff", fontSize: "20px"}} />
