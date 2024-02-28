@@ -8,7 +8,7 @@ import { useDispatch } from 'react-redux';
 import { removeFromCart } from "../../redux/actions";
 
 function CartSidebar({ show, handleClose }) {
-  const [currentProducts, setCurrentProducts] = useState([]);
+
   const cartItems = useSelector(state => state.cart);
   const [subtotal, setSubtotal] = useState(0);
   const dispatch = useDispatch();

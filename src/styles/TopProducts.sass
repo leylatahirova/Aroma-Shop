@@ -18,11 +18,16 @@
             border-bottom: 2px solid #384aeb
             padding-bottom: 8px
     &__item
-        width: 260px
+        width: auto
         height: 350px
         padding: 30px 30px 30px 30px
         border: 1px solid #EEEEEE
         margin-right: 40px
+        margin: 0 auto
+        @media(max-width: 1024px)
+            width: 100%
+            margin-bottom: 20px
+
 
         .top-products__products
             display: flex

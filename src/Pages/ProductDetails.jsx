@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Header from "../Components/Header";
 import PagesBanner from "../Components/PagesBanner";
 import TopProducts from "../Components/Shop/TopProducts";
@@ -24,7 +24,7 @@ export default function ProductDetails() {
     <>
       <Header />
       <PagesBanner text1="Shop Single" text2="Home-Shop Single" />
-      <Container style={{ paddingInline: "40px" }}>
+      <Container>
         <Row className="product__row">
           <Col lg={5}>
             <div className="product__img">

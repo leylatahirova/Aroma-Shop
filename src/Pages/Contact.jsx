@@ -18,12 +18,12 @@ export default function Contact() {
           width="1200"
           height="400"
           style={{border:0}}
-          allowfullscreen=""
+          allowFullScreen=""
           loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
+          referrerPolicy="no-referrer-when-downgrade">
         </iframe>
       </div>
-      <div style={{paddingInline:"80px", marginBottom:"100px"}} className="container">
+      <div style={{ marginBottom:"100px"}} className="container">
       <div className="row">
         <div className="col-md-4 col-lg-3 mb-4 mb-md-0">
           <div className="contact-info">

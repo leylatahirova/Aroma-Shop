@@ -27,6 +27,18 @@ export default function SliderComponent() {
       title: "Wireless Headphone",
       category: "Accessories Item",
     },
+    {
+      id: 4,
+      image: "./images/banner/hero-slide5.png",
+      title: "Wireless Headphone",
+      category: "Accessories Item",
+    },
+    {
+      id: 5,
+      image: "./images/banner/hero-slide7.png",
+      title: "Wireless Headphone",
+      category: "Accessories Item",
+    },
   ];
 
   const settings = {
@@ -64,12 +76,13 @@ export default function SliderComponent() {
   };
 
   return (
-    <Container fluid  >
+    <Container   >
       <Row style={{paddingInline:"14px"}}>
         <div className="banner-row-images">
           <Slider {...settings}>
             {sliderImages.map((item) => (
-            <Link to="/productdetails"><div className="slider-info" key={item.id}>
+            <Link to="/productdetails" key={item.id}>
+              <div className="slider-info">
                 <img src={item.image} alt="slide1" />
                 <div className="slide-overlay">
                   <h5>{item.title}</h5>

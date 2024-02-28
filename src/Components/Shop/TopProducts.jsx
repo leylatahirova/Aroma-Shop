@@ -65,30 +65,30 @@ export default function TopProducts() {
         price: "$170.00",
       },
     ],
-    // [
-    //   {
-    //     id: 10,
-    //     image: "./images/shop/product-sm-2.png",
-    //     title: "Gray Coffee Cup",
-    //     price: "$170.00",
-    //   },
-    //   {
-    //     id: 11,
-    //     image: "./images/shop/product-sm-4.png",
-    //     title: "Gray Coffee Cup",
-    //     price: "$170.00",
-    //   },
-    //   {
-    //     id: 12,
-    //     image: "./images/shop/product-sm-7.png",
-    //     title: "Gray Coffee Cup",
-    //     price: "$170.00",
-    //   },
-    // ],
+    [
+      {
+        id: 10,
+        image: "./images/shop/product-sm-2.png",
+        title: "Gray Coffee Cup",
+        price: "$170.00",
+      },
+      {
+        id: 11,
+        image: "./images/shop/product-sm-4.png",
+        title: "Gray Coffee Cup",
+        price: "$170.00",
+      },
+      {
+        id: 12,
+        image: "./images/shop/product-sm-7.png",
+        title: "Gray Coffee Cup",
+        price: "$170.00",
+      },
+    ],
   ];
 
   return (
-    <Container style={{ paddingInline: "80px" }}>
+    <Container>
       <div className="top-products">
         <div className="container">
           <div className="top-products__text">

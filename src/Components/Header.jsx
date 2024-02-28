@@ -22,10 +22,10 @@ export default function Header() {
           <Link to="/home">
             <img src="./images/logo.png.png" alt="logo" />
           </Link>
-          {/* <GiHamburgerMenu
+          <GiHamburgerMenu
             className="hamburgerMenu"
             style={{ color: "#384aeb", fontSize: "26px" }}
-          /> */}
+          />
           {/* <MobileMenu/> */}
         </div>
         <div className="navbar1">

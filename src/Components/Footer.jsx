@@ -6,6 +6,7 @@ import { FaLocationArrow } from "react-icons/fa";
 import { FaPhone } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { FaHeart } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
@@ -34,12 +35,9 @@ export default function Footer() {
                         Quick Links
                     </h4>
                     <ul>
-                        <li>Home</li>
-                        <li>Shop</li>
-                        <li>Blog</li>
-                        <li>Product</li>
-                        <li>Brand</li>
-                        <li>Contact</li>
+                        <Link to="/home"><li>Home</li></Link>
+                        <Link to="/shopcategory"><li>Shop</li></Link>
+                        <Link to="/contact"><li>Contact</li></Link>
                     </ul>
                 </div>
             </div>
@@ -64,7 +62,7 @@ export default function Footer() {
             </div>
             <div className='offset-lg-1 col-lg-3 col-md-6 col-sm-6'>
                 <div className='footer-contact'>
-                    <h4>Contact Us</h4>
+                    <Link to="/contact"><h4>Contact Us</h4></Link>
                     <div className='ml-40'>
                         <div style={{display:"flex"}}>
                             <div className='footer__icon'><FaLocationArrow style={{color:"#fff"}}/></div> 

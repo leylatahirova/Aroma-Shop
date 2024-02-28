@@ -6,8 +6,7 @@ import { GiShoppingCart } from "react-icons/gi";
 import { CiHeart } from "react-icons/ci";
 import Row from "react-bootstrap/Row";
 import { Link } from "react-router-dom";
-import Pagination from "@mui/lab/Pagination";
-import CartSidebar from "./Shop/CartSidebar";
+import { Pagination } from '@mui/material';
 import { addToCart } from "../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -43,13 +42,7 @@ export default function Product() {
 
 
   return (
-    <Container
-      style={{
-        paddingInline: "80px",
-        marginTop: "100px",
-        marginBottom: "100px",
-      }}
-    >
+    <Container className="product">
       <Row>
         <div className="product-heading">
           <p>Popular Item in the market</p>

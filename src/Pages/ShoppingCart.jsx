@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Header from "../Components/Header";
 import PagesBanner from "../Components/PagesBanner";
 import Footer from "../Components/Footer";
@@ -23,7 +23,7 @@ export default function ShoppingCart() {
       <Header />
       <PagesBanner text1="Shopping Cart" text2="Home-Shopping Cart" />
       <section className="cart__area">
-        <div className="container" style={{ paddingInline: "80px" }}>
+        <div className="container">
           <div className="cart__area_thead">
             <table>
               <thead>

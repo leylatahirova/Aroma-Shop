@@ -68,8 +68,7 @@ export default function BestSellers() {
   };
 
   return (
-    <Container fluid style={{paddingInline:"80px",marginTop:"100px", marginBottom:"100px"}}>
-      <Row style={{margin:"0 auto", maxWidth:"1200px", }}>
+      <Row style={{margin:"0 auto", maxWidth:"1200px", marginTop:"100px", marginBottom:"100px", }}>
         <div className="product-heading">
           <p>Popular Item in the market</p>
           <h2>
@@ -114,6 +113,5 @@ export default function BestSellers() {
           </div>
         </div>
       </Row>
-    </Container>
   );
 }

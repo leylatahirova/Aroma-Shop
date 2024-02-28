@@ -1,12 +1,10 @@
-import React, { useState, useEffect } from "react";
-import { Container, Row } from "react-bootstrap";
+import React, { useState} from "react";
 import "../../styles/Shop.sass";
 import { CiSearch } from "react-icons/ci";
 import { IoIosSearch } from "react-icons/io";
 import { GiShoppingCart } from "react-icons/gi";
 import { CiHeart } from "react-icons/ci";
 import { Link } from "react-router-dom";
-import CartSidebar from "./CartSidebar";
 import { addToCart } from "../../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -57,7 +55,7 @@ export default function CategoryAndFilter() {
 
   return (
     <section className="section-margin--small mb-5">
-    <div className="container" style={{ paddingInline: "80px" }}>
+    <div className="container">
       <div className="row">
         <div className="col-xl-3 col-lg-4 col-md-5">
           <div className="sidebar-categories">
