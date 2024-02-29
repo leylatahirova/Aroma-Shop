@@ -1,5 +1,4 @@
 import React, { useRef,useState } from "react";
-import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import { GoArrowLeft } from "react-icons/go";
 import { GoArrowRight } from "react-icons/go";
@@ -107,9 +106,9 @@ export default function BestSellers() {
               </div>
             ))}
           </Slider>
-          <div style={{ textAlign: "center", fontSize: "20px", cursor: "pointer" }}>
-            <GoArrowLeft onClick={handlePrevSlide} />
-            <GoArrowRight onClick={handleNextSlide} />
+          <div style={{ textAlign: "center", fontSize: "25px", cursor: "pointer", }}>
+            <GoArrowLeft style={{marginRight:"20px"}} onClick={handlePrevSlide} />
+            <GoArrowRight style={{marginLeft:"20px"}} onClick={handleNextSlide} />
           </div>
         </div>
       </Row>

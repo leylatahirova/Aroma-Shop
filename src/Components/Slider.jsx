@@ -12,32 +12,32 @@ export default function SliderComponent() {
     {
       id: 1,
       image: "./images/banner/hero-slide1.png",
-      title: "Wireless Headphone",
-      category: "Accessories Item",
+      title: "Shoes",
+      category: "Accessories",
     },
     {
       id: 2,
       image: "./images/banner/hero-slide2.png",
       title: "Wireless Headphone",
-      category: "Accessories Item",
+      category: "Accessories",
     },
     {
       id: 3,
       image: "./images/banner/hero-slide3.png",
-      title: "Wireless Headphone",
-      category: "Accessories Item",
+      title: "Decorative items",
+      category: "Accessories",
     },
     {
       id: 4,
       image: "./images/banner/hero-slide5.png",
-      title: "Wireless Headphone",
-      category: "Accessories Item",
+      title: "Face cream",
+      category: "Beauty",
     },
     {
       id: 5,
       image: "./images/banner/hero-slide7.png",
-      title: "Wireless Headphone",
-      category: "Accessories Item",
+      title: "Skin lotion",
+      category: "Beauty",
     },
   ];
 

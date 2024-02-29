@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { GiHamburgerMenu } from "react-icons/gi";
+
 import { IoIosSearch } from "react-icons/io";
 import { TfiShoppingCart } from "react-icons/tfi";
 import "../styles/Header.sass";
 import { Link } from "react-router-dom";
 import CartSidebar from "./Shop/CartSidebar";
 import { useSelector } from "react-redux";
-// import MobileMenu from "./MobileMenu";
+import MobileMenu from "./MobileMenu";
 
 export default function Header() {
   const cartItemCount = useSelector((state) => state.cart.length);
@@ -22,11 +22,8 @@ export default function Header() {
           <Link to="/home">
             <img src="./images/logo.png.png" alt="logo" />
           </Link>
-          <GiHamburgerMenu
-            className="hamburgerMenu"
-            style={{ color: "#384aeb", fontSize: "26px" }}
-          />
-          {/* <MobileMenu/> */}
+
+         
         </div>
         <div className="navbar1">
           <ul>
@@ -61,6 +58,7 @@ export default function Header() {
               </Link>
             </li>
           </ul>
+           <MobileMenu/>
         </div>
         </div>
       <CartSidebar

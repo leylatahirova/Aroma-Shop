@@ -4,20 +4,19 @@ import PagesBanner from "../Components/PagesBanner";
 import Footer from "../Components/Footer";
 import Button from "../Components/Button";
 import { MdDeleteOutline } from "react-icons/md";
-import { useDispatch } from 'react-redux';
+import { useDispatch } from "react-redux";
 import { removeFromCart } from "../redux/actions";
-import { useSelector } from 'react-redux';
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 export default function ShoppingCart() {
-
-  const cartItems = useSelector(state => state.cart);
+  const cartItems = useSelector((state) => state.cart);
   const dispatch = useDispatch();
 
   const handleRemoveFromCart = (productId) => {
     dispatch(removeFromCart(productId));
   };
- 
+
   return (
     <>
       <Header />
@@ -34,56 +33,68 @@ export default function ShoppingCart() {
                   <th>Total</th>
                 </tr>
               </thead>
-              {cartItems.map((productItem, index)=> (
-              <tbody key={productItem.id}>
-                <tr>
-                  <td>
-                    <div className="cart__area__image">
-                    <Link to="/productdetails">
-                      <div>
-                        <img src={productItem.image} alt="cart1" />
+              {cartItems.map((productItem, index) => (
+                <tbody key={productItem.id}>
+                  <tr>
+                    <td>
+                      <div className="cart__area__image">
+                        <Link to="/productdetails">
+                          <div>
+                            <img src={productItem.image} alt="cart1" />
+                          </div>
+                        </Link>
+                        <div>
+                          <p>{productItem.title}</p>
+                        </div>
                       </div>
-                      </Link>
+                    </td>
+                    <td>
+                      <h5>{productItem.price}</h5>
+                    </td>
+                    <td>
                       <div>
-                        <p>{productItem.title}</p>
+                        <input
+                          type="number"
+                          defaultValue={1}
+                          title="Quantity:"
+                        />
                       </div>
-                    </div>
-                  
-                  </td>
-                  <td>
-                    <h5>{productItem.price}</h5>
-                  </td>
-                  <td>
-                    <div>
-                      <input type="number" defaultValue={1} title="Quantity:" />
-                    </div>
-                  </td>
-                  <td>
-                    <h5>{productItem.total}</h5>
-                  </td>
-                  <td>
-                  <MdDeleteOutline style={{fontSize:"20px",}} onClick={() => handleRemoveFromCart(productItem.id)} />
-                  </td>
-                  
-                </tr>
-              </tbody>
-                ))}
-                <tbody>
-                    <tr>
-                        <td>
-                            <Button>Update Cart</Button>
-                        </td>
-                        <td>
-                            <Button>Coupon Code</Button>
-                        </td>
-                        <td>
-                            <Button>Apply</Button>
-                        </td>
-                        <td>
-                            <Button>Have a Coupon?</Button>
-                        </td>
-                    </tr>
+                    </td>
+                    <td>
+                      <h5>{productItem.price}</h5>
+                    </td>
+                    <td>
+                      <MdDeleteOutline
+                        style={{ fontSize: "20px" }}
+                        onClick={() => handleRemoveFromCart(productItem.id)}
+                      />
+                    </td>
+                  </tr>
                 </tbody>
+              ))}
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td>
+                    <h5>Subtotal</h5>
+                  </td>
+                  <td>
+                    <h5 style={{marginTop:"20px"}}>$2160.00</h5>
+                  </td>
+                </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <Button>Continue Shopping</Button>
+                    </td>
+                    <td>
+                    <Button>Proceed To Checkout</Button>
+                    </td>
+                  </tr>
+              
+              </tbody>
             </table>
           </div>
         </div>
