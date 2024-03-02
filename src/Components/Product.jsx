@@ -6,25 +6,22 @@ import { GiShoppingCart } from "react-icons/gi";
 import { CiHeart } from "react-icons/ci";
 import Row from "react-bootstrap/Row";
 import { Link } from "react-router-dom";
-import { Pagination } from '@mui/material';
+import { Pagination } from "@mui/material";
 import { addToCart } from "../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
-
 
 export default function Product() {
   const dispatch = useDispatch();
   const products = useSelector((state) => state.products);
 
-
   const handleAddToCart = (productItem) => {
     dispatch(addToCart(productItem));
   };
 
-
   const [currentPage, setCurrentPage] = useState(1);
   const [currentProducts, setCurrentProducts] = useState([]);
   const productsPerPage = 8;
-  
+
   useEffect(() => {
     const indexOfLastProduct = currentPage * productsPerPage;
     const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
@@ -38,8 +35,6 @@ export default function Product() {
   const handlePageChange = (event, page) => {
     setCurrentPage(page);
   };
-
-
 
   return (
     <Container className="product">
@@ -65,7 +60,7 @@ export default function Product() {
                     <GiShoppingCart
                       style={{ color: "#fff", fontSize: "20px" }}
                       onClick={() => {
-                        handleAddToCart(productItem)
+                        handleAddToCart(productItem);
                       }}
                     />
                   </div>
@@ -76,7 +71,7 @@ export default function Product() {
                 <div></div>
                 <div className="card-text">
                   <p>{productItem.category}</p>
-                  <Link to="../productdetails">
+                  <Link to={`/productdetails/${productItem.id}`}>
                     <h4>{productItem.title}</h4>
                   </Link>
                   <p className="product-price">{productItem.price}</p>

@@ -48,14 +48,14 @@ export default function Footer() {
                     </h4>
                     <div style={{display:"flex"}}>
                         <ul>
-                            <li><img src="./images/footer/r5.jpg" alt="gallery4" /></li>
-                            <li><img src="./images/footer/r7.jpg" alt="gallery5" /></li>
-                            <li><img src="./images/footer/r8.jpg" alt="gallery6" /></li>
+                            <li><img src="/images/footer/r5.jpg" alt="gallery4" /></li>
+                            <li><img src="/images/footer/r7.jpg" alt="gallery5" /></li>
+                            <li><img src="/images/footer/r8.jpg" alt="gallery6" /></li>
                         </ul>
                         <ul>
-                        <li><img src="./images/footer/r1.jpg" alt="gallery1" /></li>
-                        <li><img src="./images/footer/r2.jpg" alt="gallery2" /></li>
-                        <li><img src="./images/footer/r3.jpg" alt="gallery3" /></li>
+                        <li><img src="/images/footer/r1.jpg" alt="gallery1" /></li>
+                        <li><img src="/images/footer/r2.jpg" alt="gallery2" /></li>
+                        <li><img src="/images/footer/r3.jpg" alt="gallery3" /></li>
                     </ul>
                     </div>
                 </div>

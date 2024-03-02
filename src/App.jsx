@@ -6,7 +6,7 @@ import Contact from "./Pages/Contact";
 import ShopCategory from "./Pages/ShopCategory";
 import ProductDetails from "./Pages/ProductDetails";
 import ShoppingCart from "./Pages/ShoppingCart";
-import ProductCheckout from "./Pages/ProductCheckout";
+// import ProductCheckout from "./Pages/ProductCheckout";
 import LoginRegister from "./Pages/LoginRegister";
 
 function ScrollToTop() {
@@ -27,9 +27,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         <Route path="/shopcategory" element={<ShopCategory />} />
-        <Route path="/productdetails" element={<ProductDetails />} />
+        <Route path="/productdetails/:id" element={<ProductDetails />} />
         <Route path="/shoppingcart" element={<ShoppingCart />} />
-        <Route path="/productcheckout" element={<ProductCheckout />} />
+        {/* <Route path="/productcheckout" element={<ProductCheckout />} /> */}
         <Route path="/loginregister" element={<LoginRegister />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>

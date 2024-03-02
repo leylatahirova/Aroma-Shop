@@ -81,7 +81,7 @@ export default function SliderComponent() {
         <div className="banner-row-images">
           <Slider {...settings}>
             {sliderImages.map((item) => (
-            <Link to="/productdetails" key={item.id}>
+            <Link to="/shopcategory" key={item.id}>
               <div className="slider-info">
                 <img src={item.image} alt="slide1" />
                 <div className="slide-overlay">

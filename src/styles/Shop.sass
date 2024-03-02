@@ -13,6 +13,7 @@
     padding: 10px 20px 10px 20px
     background-color: #f1f6f7
     input
+        width: 100%
         border: 1px solid #eee
         font-size: 14px
         color: #999999
@@ -40,9 +41,14 @@
 // Product-details
 .product__img
     img
+        margin-bottom: 20px
+        width: 550px
+        @media (max-width: 1366px) and (min-width: 1024px)
+            width: 450px
+
         @media(max-width: 768px)
-             width: 350px
-             margin-bottom: 40px
+            width: 350px
+            margin-bottom: 40px
 
 .product__row
     display: flex
@@ -78,12 +84,15 @@
         color: #777
         font-size: 15px
         font-weight: 400
+
+.product__details
     label
-        padding-right: 20px
+        padding-right: 30px
         padding-top: 40px
         input
             width: 60px
             border: 1px solid #eee
+            text-align: center
 
 .product__icon
     padding-top: 40px
@@ -107,6 +116,8 @@
     margin-top: 90px
 .canvas
     position: relative
+    margin-bottom: 50px
+   
     h6
         padding-bottom: 10px
     .canvas__info
@@ -121,7 +132,7 @@
     .product__button
         background-color: #fff
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px
-        padding: 20px 86px
+        padding: 10px 86px
         position: fixed
         display: flex
         justify-content: center
@@ -157,14 +168,20 @@
                 padding-left: 10px
 
 // .latest-product
-//     width: 860px
+//     @media(max-width: 1024px)
+//         width: 560px
+
+.product-card-img
+    img
+        @media (max-width: 1366px) and (min-width: 768px)
+            width: 180px
 
 // Shopping-Cart
 .cart__area_thead
     display: flex
     justify-content: center
     align-items: center
-    
+
     th
         font-size: 16px
         font-weight: 500
@@ -194,7 +211,7 @@ tbody
             border: 1px solid #cccccc
             border-radius: 5px
             color: #999999
-       
+
         button
             font-size: 14px
             margin-right: 2px
@@ -214,12 +231,5 @@ tbody
     h5
         font-size: 15px
         color: #222
-    
-
-
-
-
 
 // product checkout
-
-

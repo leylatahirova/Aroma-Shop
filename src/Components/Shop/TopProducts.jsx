@@ -8,19 +8,19 @@ export default function TopProducts() {
     [
       {
         id: 1,
-        image: "./images/shop/product-sm-1.png",
+        image: "/images/shop/product-sm-1.png",
         title: "Gray Coffee Cup",
         price: "$170.00",
       },
       {
         id: 2,
-        image: "./images/shop/product-sm-2.png",
+        image: "/images/shop/product-sm-2.png",
         title: "Gray Coffee Cup",
         price: "$170.00",
       },
       {
         id: 3,
-        image: "./images/shop/product-sm-3.png",
+        image: "/images/shop/product-sm-3.png",
         title: "Gray Coffee Cup",
         price: "$170.00",
       },
@@ -28,19 +28,19 @@ export default function TopProducts() {
     [
       {
         id: 4,
-        image: "./images/shop/product-sm-4.png",
+        image: "/images/shop/product-sm-4.png",
         title: "Gray Coffee Cup",
         price: "$170.00",
       },
       {
         id: 5,
-        image: "./images/shop/product-sm-5.png",
+        image: "/images/shop/product-sm-5.png",
         title: "Gray Coffee Cup",
         price: "$170.00",
       },
       {
         id: 6,
-        image: "./images/shop/product-sm-6.png",
+        image: "/images/shop/product-sm-6.png",
         title: "Gray Coffee Cup",
         price: "$170.00",
       },
@@ -48,19 +48,19 @@ export default function TopProducts() {
     [
       {
         id: 7,
-        image: "./images/shop/product-sm-7.png",
+        image: "/images/shop/product-sm-7.png",
         title: "Gray Coffee Cup",
         price: "$170.00",
       },
       {
         id: 8,
-        image: "./images/shop/product-sm-8.png",
+        image: "/images/shop/product-sm-8.png",
         title: "Gray Coffee Cup",
         price: "$170.00",
       },
       {
         id: 9,
-        image: "./images/shop/product-sm-9.png",
+        image: "/images/shop/product-sm-9.png",
         title: "Gray Coffee Cup",
         price: "$170.00",
       },
@@ -68,19 +68,19 @@ export default function TopProducts() {
     [
       {
         id: 10,
-        image: "./images/shop/product-sm-2.png",
+        image: "/images/shop/product-sm-2.png",
         title: "Gray Coffee Cup",
         price: "$170.00",
       },
       {
         id: 11,
-        image: "./images/shop/product-sm-4.png",
+        image: "/images/shop/product-sm-4.png",
         title: "Gray Coffee Cup",
         price: "$170.00",
       },
       {
         id: 12,
-        image: "./images/shop/product-sm-7.png",
+        image: "/images/shop/product-sm-7.png",
         title: "Gray Coffee Cup",
         price: "$170.00",
       },
@@ -102,9 +102,7 @@ export default function TopProducts() {
               <div className="top-products__item" key={index}>
                 {group.map((product) => (
                   <div className="top-products__products" key={product.id}>
-                    <Link to="../productdetails">
                       <img src={product.image} alt="product" />
-                    </Link>
                     <div>
                       <Link to="../productdetails">{product.title}</Link>
                       <p>{product.price}</p>

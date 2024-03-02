@@ -20,7 +20,7 @@ export default function Header() {
       <div className="header__nav">
         <div className="logo">
           <Link to="/home">
-            <img src="./images/logo.png.png" alt="logo" />
+            <img src="/images/logo.png.png" alt="logo" />
           </Link>
 
          

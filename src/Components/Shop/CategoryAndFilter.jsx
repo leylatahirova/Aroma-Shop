@@ -311,7 +311,7 @@ export default function CategoryAndFilter() {
                     <div></div>
                     <div className="card-text">
                       <p>{productItem.category}</p>
-                      <Link to="../productdetails">
+                      <Link to={`/productdetails/${productItem.id}`}>
                         <h4>{productItem.title}</h4>
                       </Link>
                       <p className="product-price">{productItem.price}</p>

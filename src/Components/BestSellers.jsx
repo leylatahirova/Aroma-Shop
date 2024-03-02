@@ -33,7 +33,7 @@ export default function BestSellers() {
     pauseOnHover: false,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1124,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
@@ -99,7 +99,9 @@ export default function BestSellers() {
                   </div>
                   <div className="card-text">
                     <p>{productItem.category}</p>
-                    <Link to="../productdetails"><h4>{productItem.title}</h4></Link>
+                    <Link to={`/productdetails/${productItem.id}`}>
+                      <h4>{productItem.title}</h4>
+                    </Link>
                     <p className="product-price">{productItem.price}</p>
                   </div>
                 </div>

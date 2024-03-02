@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../Components/Header";
 import PagesBanner from "../Components/PagesBanner";
 import Footer from "../Components/Footer";
@@ -12,10 +12,16 @@ import { Link } from "react-router-dom";
 export default function ShoppingCart() {
   const cartItems = useSelector((state) => state.cart);
   const dispatch = useDispatch();
+  const [subtotal, setSubtotal] = useState(0);
 
   const handleRemoveFromCart = (productId) => {
     dispatch(removeFromCart(productId));
   };
+
+  useEffect(() => {
+    const total = cartItems.reduce((acc, item) => acc + parseFloat(item.price.replace('$', '')), 0);
+    setSubtotal(total);
+  }, [cartItems]);
 
   return (
     <>
@@ -80,7 +86,7 @@ export default function ShoppingCart() {
                     <h5>Subtotal</h5>
                   </td>
                   <td>
-                    <h5 style={{marginTop:"20px"}}>$2160.00</h5>
+                    <h5 style={{marginTop:"20px"}}>${subtotal.toFixed(2)}</h5>
                   </td>
                 </tr>
                   <tr>
