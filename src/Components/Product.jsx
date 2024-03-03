@@ -68,7 +68,7 @@ export default function Product() {
                     <CiHeart style={{ color: "#fff", fontSize: "20px" }} />
                   </div>
                 </div>
-                <div></div>
+            
                 <div className="card-text">
                   <p>{productItem.category}</p>
                   <Link to={`/productdetails/${productItem.id}`}>

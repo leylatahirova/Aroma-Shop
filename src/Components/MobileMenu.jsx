@@ -3,12 +3,19 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoIosSearch } from "react-icons/io";
 import { Link } from "react-router-dom";
+import { TfiShoppingCart } from "react-icons/tfi";
+import CartSidebar from "./Shop/CartSidebar";
+import "../styles/Header.sass";
 
 function Example() {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+ 
+  const [showCartSidebar, setShowCartSidebar] = useState(false);
+  const handleCloseCartSidebar = () => setShowCartSidebar(false);
 
   return (
     <>
@@ -34,9 +41,19 @@ function Example() {
             <div>
               <button style={{marginLeft:"40px"}}>Login</button>
             </div>
+            <div>
+              <TfiShoppingCart
+                onClick={() => setShowCartSidebar(true)}
+                style={{ color: "#222", fontSize: "18px", cursor: "pointer", marginLeft:"20px" }}
+              />
+            </div>
           </div>
         </Offcanvas.Body>
       </Offcanvas>
+      <CartSidebar
+        show={showCartSidebar}
+        handleClose={handleCloseCartSidebar}
+      />
     </>
   );
 }

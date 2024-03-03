@@ -126,7 +126,7 @@ export default function ProductDetails() {
               <div className="product__text">
                 <h3>{productItem.title}</h3>
                 <h2>{productItem.price}</h2>
-                <ul>
+                <ul style={{listStyle:"none"}}>
                   <li>
                     Category<span> :{productItem.category}</span>
                   </li>

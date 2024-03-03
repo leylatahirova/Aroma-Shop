@@ -3,6 +3,7 @@ import Header from "../Components/Header";
 import PagesBanner from "../Components/PagesBanner";
 import Footer from "../Components/Footer";
 import Button from 'react-bootstrap/Button';
+import { Link } from "react-router-dom";
 import {
   MDBBtn,
   MDBContainer,
@@ -39,13 +40,13 @@ export default function LoginRegister() {
                 type="password"
               />
 
-              <div className="text-center pt-1 mb-5 pb-1">
-                <MDBBtn style={{backgroundColor:"#495DED", borderRadius:"20px"}} className="mb-4 w-100 gradient-custom-2">
+              <div style={{display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center"}} className="text-center pt-1 mb-5 pb-1">
+                <MDBBtn style={{backgroundColor:"#495DED", borderRadius:"20px"}} className="mb-4 w-50 gradient-custom-2">
                   Sign in
                 </MDBBtn>
-                <a className="text-muted" href="#!">
+                <Link>
                   Forgot password?
-                </a>
+                </Link>
               </div>
             </div>
           </MDBCol>

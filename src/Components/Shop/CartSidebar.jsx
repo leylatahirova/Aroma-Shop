@@ -1,20 +1,22 @@
 import React, { useEffect, useState } from "react";
-import Offcanvas from 'react-bootstrap/Offcanvas';
+import Offcanvas from "react-bootstrap/Offcanvas";
 import { Link } from "react-router-dom";
-import Button from 'react-bootstrap/Button';
-import { useSelector } from 'react-redux';
+import Button from "react-bootstrap/Button";
+import { useSelector } from "react-redux";
 import { MdDeleteOutline } from "react-icons/md";
-import { useDispatch } from 'react-redux';
+import { useDispatch } from "react-redux";
 import { removeFromCart } from "../../redux/actions";
 
 function CartSidebar({ show, handleClose }) {
-
-  const cartItems = useSelector(state => state.cart);
+  const cartItems = useSelector((state) => state.cart);
   const [subtotal, setSubtotal] = useState(0);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const total = cartItems.reduce((acc, item) => acc + parseFloat(item.price.replace('$', '')), 0);
+    const total = cartItems.reduce(
+      (acc, item) => acc + parseFloat(item.price.replace("$", "")),
+      0
+    );
     setSubtotal(total);
   }, [cartItems]);
 
@@ -34,11 +36,23 @@ function CartSidebar({ show, handleClose }) {
               <h6>{productItem.title}</h6>
               <div className="canvas__info">
                 <img src={productItem.image} alt={productItem.title} />
-                <div>
-                  <p>Category: {productItem.category}</p>
-                  <p>{productItem.price}</p>
+                <div className="canvas__info__text">
+                  <div className="c-text">
+                    <p>Category: {productItem.category}</p>
+                    <MdDeleteOutline
+                      style={{
+                        fontSize: "20px",
+                        cursor: "pointer",
+                        marginLeft: "10px",
+                        color: "#880000",
+                      }}
+                      onClick={() => handleRemoveFromCart(productItem.id)}
+                    />
+                  </div>
+                  <div>
+                    <p>{productItem.price}</p> 
+                  </div>
                 </div>
-                <MdDeleteOutline style={{fontSize:"20px", cursor:"pointer", marginLeft:"10px"}} onClick={() => handleRemoveFromCart(productItem.id)} />
               </div>
             </div>
           ))}

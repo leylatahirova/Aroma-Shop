@@ -61,7 +61,7 @@ export default function CategoryAndFilter() {
           <div className="sidebar-categories">
             <div className="sidebar-list">Browse Categories</div>
             <div className="sidebar-all">
-              <ul>
+              <ul style={{listStyle:"none"}}>
                 <li>
                   <input
                     className="input-radio"
@@ -123,7 +123,7 @@ export default function CategoryAndFilter() {
           <div className="sidebar-categories">
             <div className="sidebar-list">Product Filters</div>
             <div className="sidebar-all">
-              <ul>
+              <ul style={{listStyle:"none"}}>
                 <span>Brands</span>
                 <li>
                   <input
@@ -181,7 +181,7 @@ export default function CategoryAndFilter() {
                   <label>Samsung (54)</label>
                 </li>
               </ul>
-              <ul>
+              <ul style={{listStyle:"none"}}>
                 <span>Color</span>
                 <li>
                   <input
@@ -254,7 +254,7 @@ export default function CategoryAndFilter() {
         </div>
         <div className="col-xl-9 col-lg-8 col-md-7">
           <div className="filter__bar">
-            <div className="sorting">
+            {/* <div className="sorting">
               <select className="option-a">
                 <option value="1">Sort by Recommended</option>
                 <option value="1">Price(High to Low)</option>
@@ -270,7 +270,7 @@ export default function CategoryAndFilter() {
                 <option value="1">Show 2</option>
                 <option value="1">Show 3</option>
               </select>
-            </div>
+            </div> */}
             <div>
               <div className="input-group filter-bar-search">
                 <input type="text" placeholder="Search" />

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-
 import { IoIosSearch } from "react-icons/io";
 import { TfiShoppingCart } from "react-icons/tfi";
+import { GrFavorite } from "react-icons/gr";
 import "../styles/Header.sass";
 import { Link } from "react-router-dom";
 import CartSidebar from "./Shop/CartSidebar";
@@ -22,11 +22,9 @@ export default function Header() {
           <Link to="/home">
             <img src="/images/logo.png.png" alt="logo" />
           </Link>
-
-         
         </div>
         <div className="navbar1">
-          <ul>
+          <ul className="navbar-ul">
             <li className="nav-item active">
               <Link to="/home">Home</Link>
             </li>
@@ -39,7 +37,12 @@ export default function Header() {
           </ul>
         </div>
         <div className="navbar1">
-          <ul>
+          <ul className="navbar-ul">
+          {/* <li className="nav-item">
+              <GrFavorite
+                 style={{ color: "#222", fontSize: "17px", cursor: "pointer" }}
+              />
+            </li> */}
             <li className="nav-item">
               <IoIosSearch
                 style={{ color: "#222", fontSize: "20px", cursor: "pointer" }}

@@ -18,14 +18,13 @@ export default function Footer() {
                         Our Mission
                     </h4>
                     <p>
-                        So seed seed green that winged cattle in. 
-                        Gathering thing made fly you're no divided 
-                        deep moved us lan Gathering thing us land years 
-                        living.
+                         Providing customers with quality, premium products: 
+                         Aroma Shop aims to provide customers with high quality 
+                         products and exceed their expectations. 
                     </p>
                     <p>
-                        So seed seed green that winged cattle in. Gathering 
-                        thing made fly you're no divided deep moved
+                          Responding to customer demands at a high level: Aroma Shop is committed to meeting customers'
+                           wishes and demands at a high level.
                     </p>
                 </div>
             </div>
@@ -34,7 +33,7 @@ export default function Footer() {
                     <h4>
                         Quick Links
                     </h4>
-                    <ul>
+                    <ul style={{listStyle:"none"}}>
                         <Link to="/home"><li>Home</li></Link>
                         <Link to="/shopcategory"><li>Shop</li></Link>
                         <Link to="/contact"><li>Contact</li></Link>
@@ -47,12 +46,12 @@ export default function Footer() {
                         Gallery
                     </h4>
                     <div style={{display:"flex"}}>
-                        <ul>
+                        <ul style={{listStyle:"none"}}>
                             <li><img src="/images/footer/r5.jpg" alt="gallery4" /></li>
                             <li><img src="/images/footer/r7.jpg" alt="gallery5" /></li>
                             <li><img src="/images/footer/r8.jpg" alt="gallery6" /></li>
                         </ul>
-                        <ul>
+                        <ul style={{listStyle:"none"}}>
                         <li><img src="/images/footer/r1.jpg" alt="gallery1" /></li>
                         <li><img src="/images/footer/r2.jpg" alt="gallery2" /></li>
                         <li><img src="/images/footer/r3.jpg" alt="gallery3" /></li>
