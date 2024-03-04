@@ -13,9 +13,19 @@ export default function ProductCheckout() {
   const [subtotal, setSubtotal] = useState(0);
 
   useEffect(() => {
-    const total = cartItems.reduce((acc, item) => acc + parseFloat(item.price.replace('$', '')), 0);
-    setSubtotal(total);
+    const calculateSubtotal = () => {
+      let total = 0;
+      cartItems.forEach((item) => {
+        const price = parseFloat(item.price.replace("$", ""));
+        const quantity = item.quantity;
+        total += price * quantity;
+      });
+      setSubtotal(total);
+    };
+
+    calculateSubtotal();
   }, [cartItems]);
+
   return (
     <>
       <Header />
@@ -229,9 +239,9 @@ export default function ProductCheckout() {
                       <p>Total</p>
                     </li>
                     {cartItems.map((productItem, index) => (
-                    <li style={{display:"flex", alignItems:"center", justifyContent:"space-between"}}>
+                    <li  key={index} style={{display:"flex", alignItems:"center", justifyContent:"space-between"}}>
                       <p>{productItem.title}</p>
-                      <p>{productItem.price}</p>
+                      <p>{productItem.price} x {productItem.quantity}</p>
                     </li>
                     ))}
                   </ul>

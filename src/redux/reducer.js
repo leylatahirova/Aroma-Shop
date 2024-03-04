@@ -184,20 +184,70 @@ const initialState = {
 };
 
 
+// const productReducer = (state = initialState, action) => {
+//   switch (action.type) {
+//     case ADD_TO_CART:
+//       return {
+//         ...state,
+//         cart: [...state.cart, action.payload], 
+//       };
+//     case REMOVE_FROM_CART:
+//       return {
+//         ...state,
+//         cart: state.cart.filter((item) => item.id !== action.payload), 
+//       };
+//     default:
+//       return state;
+//   }
+// };
+
+// export default productReducer;
+
+
 const productReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_TO_CART:
-      return {
-        ...state,
-        cart: [...state.cart, action.payload], 
-      };
+      const productId = action.payload.id;
+      const existingProductIndex = state.cart.findIndex(item => item.id === productId);
+
+      if (existingProductIndex !== -1) {
+        const updatedCart = state.cart.map((item, index) => {
+          if (index === existingProductIndex) {
+            return {
+              ...item,
+              quantity: item.quantity + 1 
+            };
+          }
+          return item;
+        });
+
+        return {
+          ...state,
+          cart: updatedCart,
+        };
+      } else {
+        const newCartItem = {
+          ...action.payload,
+          quantity: 1 
+        };
+
+        return {
+          ...state,
+          cart: [...state.cart, newCartItem],
+        };
+      }
+
     case REMOVE_FROM_CART:
+      const updatedCart = state.cart.filter(item => item.id !== action.payload);
+
       return {
         ...state,
-        cart: state.cart.filter((item) => item.id !== action.payload), 
+        cart: updatedCart,
       };
+
     default:
       return state;
+      
   }
 };
 

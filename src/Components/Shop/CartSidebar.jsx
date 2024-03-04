@@ -13,13 +13,20 @@ function CartSidebar({ show, handleClose }) {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const total = cartItems.reduce(
-      (acc, item) => acc + parseFloat(item.price.replace("$", "")),
-      0
-    );
-    setSubtotal(total);
+    const calculateSubtotal = () => {
+      let total = 0;
+      cartItems.forEach((item) => {
+        const price = parseFloat(item.price.replace("$", ""));
+        const quantity = item.quantity;
+        total += price * quantity;
+      });
+      setSubtotal(total);
+    };
+
+    calculateSubtotal();
   }, [cartItems]);
 
+  
   const handleRemoveFromCart = (productId) => {
     dispatch(removeFromCart(productId));
   };
@@ -50,7 +57,7 @@ function CartSidebar({ show, handleClose }) {
                     />
                   </div>
                   <div>
-                    <p>{productItem.price}</p> 
+                    <p>{productItem.price} x {productItem.quantity}</p> 
                   </div>
                 </div>
               </div>

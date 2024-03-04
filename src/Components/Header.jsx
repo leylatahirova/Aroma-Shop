@@ -10,10 +10,14 @@ import { useSelector } from "react-redux";
 import MobileMenu from "./MobileMenu";
 
 export default function Header() {
-  const cartItemCount = useSelector((state) => state.cart.length);
+  const cartItems = useSelector((state) => state.cart);
   const [showCartSidebar, setShowCartSidebar] = useState(false);
   const handleCloseCartSidebar = () => setShowCartSidebar(false);
-  
+
+  const cartItemCount = cartItems.reduce(
+    (total, item) => total + item.quantity,
+    0
+  );
 
   return (
     <header className="header">
