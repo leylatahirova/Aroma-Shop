@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { IoIosSearch } from "react-icons/io";
 import { TfiShoppingCart } from "react-icons/tfi";
-import { GrFavorite } from "react-icons/gr";
+// import { GrFavorite } from "react-icons/gr";
 import "../styles/Header.sass";
 import { Link } from "react-router-dom";
 import CartSidebar from "./Shop/CartSidebar";

@@ -2,38 +2,39 @@
     padding-inline: 80px
     margin-top: 100px
     margin-bottom: 100px
+
     @media(max-width: 1024px)
         padding-inline: 20px
-.product-heading
-    p
-        color: #777
-        font-size: 15px
-        font-weight: 400
-    h2
-        font-family: "Oswald",sans-serif
-        color: #222
-        font-size: 36px
-        font-weight: 600
-    span
-        font-family: "Oswald",sans-serif
-        color: #222
-        font-size: 36px
-        font-weight: 600
-        border-bottom: 2px solid #384aeb
-        padding-bottom: 8px
 
-.product-card
+    &__heading
+        p
+            color: #777
+            font-size: 15px
+            font-weight: 400
+        h2
+            font-family: "Oswald",sans-serif
+            color: #222
+            font-size: 36px
+            font-weight: 600
+        span
+            font-family: "Oswald",sans-serif
+            color: #222
+            font-size: 36px
+            font-weight: 600
+            border-bottom: 2px solid #384aeb
+            padding-bottom: 8px
+
+.product__card
     display: flex
     flex-direction: column
     align-items: center
     position: relative
 
-    .product-card-img
+    .product__card__img
         img
             padding-bottom: 20px
             padding-top: 60px
-        @media (max-width: 1366px) and (min-width: 1024px)
-            width: 180px
+      
 
     &:hover .product-icon
         top: 240px
@@ -42,14 +43,14 @@
 
 .product-icon
     background-color: rgba(255, 255, 255, 0.5)
-    width: 289px
+    width: 264px
     height: 100px
     display: flex
     align-items: center
     justify-content: center
     gap: 10px
     position: absolute
-    left: 0
+    left: 2
     top: 56%
     z-index: 9
     transition: all, 0.5s
@@ -67,7 +68,7 @@
         &:hover
             background-color: #384aeb
 
-.card-text
+.card__text
     text-align: center
 
     a
@@ -87,11 +88,11 @@
         &:hover
             color: #384aeb
 
-    .product-price
+    .product__price
         font-size: 18px
         font-weight: 500
 
-.pagination-container
+.pagination__container
     display: flex
     justify-content: center
     margin-top: 20px

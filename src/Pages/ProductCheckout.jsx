@@ -4,11 +4,12 @@ import PagesBanner from "../Components/PagesBanner";
 import Footer from "../Components/Footer";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
+
+import "../styles/ProductCheckout.sass";
 
 export default function ProductCheckout() {
   const cartItems = useSelector((state) => state.cart);
-  const dispatch = useDispatch();
+
 
   const [subtotal, setSubtotal] = useState(0);
 
@@ -54,6 +55,7 @@ export default function ProductCheckout() {
                   onBlur={(e) => (e.target.placeholder = "Username or Email*")}
                   id="name"
                   name="name"
+                  autocomplete="off"
                 />
               </div>
               <div className="col-md-6 form-group p_star">
@@ -65,6 +67,7 @@ export default function ProductCheckout() {
                   onBlur={(e) => (e.target.placeholder = "Password*")}
                   id="password"
                   name="password"
+                  autocomplete="off"
                 />
               </div>
               <div className="col-md-12 form-group">
@@ -102,11 +105,9 @@ export default function ProductCheckout() {
                       className="form-control"
                       id="first"
                       name="name"
+                      placeholder="First name"
+                      autocomplete="off"
                     />
-                    <span
-                      className="placeholder"
-                      data-placeholder="First name"
-                    ></span>
                   </div>
                   <div className="col-md-6 form-group p_star">
                     <input
@@ -114,11 +115,9 @@ export default function ProductCheckout() {
                       className="form-control"
                       id="last"
                       name="name"
+                      placeholder="Last name"
+                      autocomplete="off"
                     />
-                    <span
-                      className="placeholder"
-                      data-placeholder="Last name"
-                    ></span>
                   </div>
                   <div className="col-md-12 form-group">
                     <input
@@ -127,6 +126,7 @@ export default function ProductCheckout() {
                       id="company"
                       name="company"
                       placeholder="Company name"
+                      autocomplete="off"
                     />
                   </div>
                   <div className="col-md-6 form-group p_star">
@@ -135,6 +135,7 @@ export default function ProductCheckout() {
                       className="form-control"
                       id="number"
                       name="number"
+                      autocomplete="off"
                     />
                     <span
                       className="placeholder"
@@ -147,6 +148,7 @@ export default function ProductCheckout() {
                       className="form-control"
                       id="email"
                       name="compemailany"
+                      autocomplete="off"
                     />
                     <span
                       className="placeholder"
@@ -166,6 +168,7 @@ export default function ProductCheckout() {
                       className="form-control"
                       id="add1"
                       name="add1"
+                      autocomplete="off"
                     />
                     <span
                       className="placeholder"
@@ -178,6 +181,7 @@ export default function ProductCheckout() {
                       className="form-control"
                       id="add2"
                       name="add2"
+                      autocomplete="off"
                     />
                     <span
                       className="placeholder"
@@ -190,6 +194,7 @@ export default function ProductCheckout() {
                       className="form-control"
                       id="city"
                       name="city"
+                      autocomplete="off"
                     />
                     <span
                       className="placeholder"
@@ -210,6 +215,7 @@ export default function ProductCheckout() {
                       id="zip"
                       name="zip"
                       placeholder="Postcode/ZIP"
+                      autocomplete="off"
                     />
                   </div>
                   <div className="col-md-12 form-group">
@@ -226,6 +232,7 @@ export default function ProductCheckout() {
                       id="message"
                       rows="1"
                       placeholder="Order Notes"
+                      autocomplete="off"
                     ></textarea>
                   </div>
                 </form>

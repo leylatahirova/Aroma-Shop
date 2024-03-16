@@ -1,0 +1,83 @@
+.subscribe {
+  padding: 45px 10px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0px -5px 20px 0px rgba(56, 74, 235, 0.1);
+}
+@media (min-width: 1000px) {
+  .subscribe {
+    padding: 85px 10px;
+  }
+  .subscribe__title {
+    font-size: 36px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    font-family: "Oswald", sans-serif;
+  }
+}
+@media (min-width: 1000px) and (max-width: 768px) {
+  .subscribe__title {
+    font-family: "Oswald", sans-serif;
+    font-size: 136px;
+  }
+}
+@media (min-width: 1000px) {
+  .subscribe-form {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media (min-width: 1000px) and (max-width: 768px) {
+  .subscribe-form {
+    flex-direction: column;
+  }
+}
+@media (min-width: 1000px) {
+  .subscribe-form .form-control {
+    border-radius: 30px;
+    height: 50px;
+    border-color: #EEEEEE;
+    padding-left: 20px;
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+}
+@media (min-width: 1000px) and (min-width: 800px) {
+  .subscribe-form .form-control {
+    min-width: 380px;
+  }
+}
+@media (min-width: 1000px) {
+  .subscribe-form .form-control::-moz-placeholder {
+    color: #999999;
+  }
+  .subscribe-form .form-control::placeholder {
+    color: #999999;
+  }
+  .subscribe-form .form-control:focus {
+    outline: 0;
+    box-shadow: none;
+  }
+  .subscribe-form button {
+    margin-left: 15px;
+    height: 50px;
+  }
+}
+@media (min-width: 1000px) and (max-width: 768px) {
+  .subscribe-form button {
+    margin-top: 20px;
+  }
+}
+@media (min-width: 1000px) {
+  .subscribe-position {
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: 1000px) and (min-width: 1000px) {
+  .subscribe-position {
+    position: relative;
+    top: 100px;
+    margin-bottom: 0;
+  }
+}/*# sourceMappingURL=Subscribe.css.map */

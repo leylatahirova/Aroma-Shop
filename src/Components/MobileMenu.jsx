@@ -38,9 +38,11 @@ function Example() {
                 style={{ color: "#222", fontSize: "20px", cursor: "pointer" }}
               />
             </div>
+            <Link to="/loginregister">
             <div>
               <button style={{marginLeft:"40px"}}>Login</button>
             </div>
+            </Link>
             <div>
               <TfiShoppingCart
                 onClick={() => setShowCartSidebar(true)}

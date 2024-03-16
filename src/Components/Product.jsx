@@ -4,7 +4,6 @@ import Container from "react-bootstrap/Container";
 import { IoIosSearch } from "react-icons/io";
 import { GiShoppingCart } from "react-icons/gi";
 import { CiHeart } from "react-icons/ci";
-import Row from "react-bootstrap/Row";
 import { Link } from "react-router-dom";
 import { Pagination } from "@mui/material";
 import { addToCart } from "../redux/actions";
@@ -38,8 +37,7 @@ export default function Product() {
 
   return (
     <Container className="product">
-      <Row>
-        <div className="product-heading">
+        <div className="product__heading">
           <p>Popular Item in the market</p>
           <h2>
             Trending<span> Product</span>
@@ -48,8 +46,8 @@ export default function Product() {
         <div className="row">
           {currentProducts.map((productItem) => (
             <div key={productItem.id} className="col-md-6 col-lg-4 col-xl-3">
-              <div className="product-card">
-                <div className="product-card-img">
+              <div className="product__card">
+                <div className="product__card__img">
                   <img src={productItem.image} alt="productImage" />
                 </div>
                 <div className="product-icon">
@@ -68,18 +66,17 @@ export default function Product() {
                     <CiHeart style={{ color: "#fff", fontSize: "20px" }} />
                   </div>
                 </div>
-            
-                <div className="card-text">
+                <div className="card__text">
                   <p>{productItem.category}</p>
                   <Link to={`/productdetails/${productItem.id}`}>
                     <h4>{productItem.title}</h4>
                   </Link>
-                  <p className="product-price">{productItem.price}</p>
+                  <p className="product__price">{productItem.price}</p>
                 </div>
               </div>
             </div>
           ))}
-          <div className="pagination-container">
+          <div className="pagination__container">
             <Pagination
               count={Math.ceil(products.length / productsPerPage)}
               shape="rounded"
@@ -88,7 +85,6 @@ export default function Product() {
             />
           </div>
         </div>
-      </Row>
     </Container>
   );
 }

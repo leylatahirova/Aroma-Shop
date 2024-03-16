@@ -1,5 +1,4 @@
 import React, { useState} from "react";
-import "../../styles/Shop.sass";
 import { CiSearch } from "react-icons/ci";
 import { IoIosSearch } from "react-icons/io";
 import { GiShoppingCart } from "react-icons/gi";
@@ -7,16 +6,18 @@ import { CiHeart } from "react-icons/ci";
 import { Link } from "react-router-dom";
 import { addToCart } from "../../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
+import "../../styles/CategoryAndFilter.sass";
+
 
 export default function CategoryAndFilter() {
   const dispatch = useDispatch();
   const products = useSelector((state) => state.products);
 
-  const [showCartSidebar, setShowCartSidebar] = useState(false);
+
 
   const handleAddToCart = (productItem) => {
     dispatch(addToCart(productItem));
-    setShowCartSidebar(true);
+  
   };
 
 
@@ -70,7 +71,7 @@ export default function CategoryAndFilter() {
                     checked={!selectedCategory}
                     onChange={() => handleCategoryChange("all")}
                   />
-                  <label>All (15)</label>
+                  <label htmlFor="all">All (15)</label>
                 </li>
                 <li>
                   <input
@@ -79,7 +80,7 @@ export default function CategoryAndFilter() {
                     checked={selectedCategory === "Electronics"}
                     onChange={() => handleCategoryChange("Electronics")}
                   />
-                  <label>Electronics (2)</label>
+                  <label htmlFor="electronics">Electronics (2)</label>
                 </li>
                 <li>
                   <input
@@ -88,7 +89,7 @@ export default function CategoryAndFilter() {
                     checked={selectedCategory === "Accessories"}
                     onChange={() => handleCategoryChange("Accessories")}
                   />
-                  <label>Accessories (7)</label>
+                  <label htmlFor="accessories">Accessories (7)</label>
                 </li>
                 <li>
                   <input
@@ -97,7 +98,7 @@ export default function CategoryAndFilter() {
                     checked={selectedCategory === "Beauty"}
                     onChange={() => handleCategoryChange("Beauty")}
                   />
-                  <label>Beauty (3)</label>
+                  <label htmlFor="beauty">Beauty (3)</label>
                 </li>
                 <li>
                   <input
@@ -106,7 +107,7 @@ export default function CategoryAndFilter() {
                     checked={selectedCategory === "Decor"}
                     onChange={() => handleCategoryChange("Decor")}
                   />
-                  <label>Decor (2)</label>
+                  <label htmlFor="decor">Decor (2)</label>
                 </li>
                 <li>
                   <input
@@ -115,7 +116,7 @@ export default function CategoryAndFilter() {
                     checked={selectedCategory === "Kids Toy"}
                     onChange={() => handleCategoryChange("Kids Toy")}
                   />
-                  <label>Kids Toy (1)</label>
+                  <label htmlFor="kidsToy">Kids Toy (1)</label>
                 </li>
               </ul>
             </div>
@@ -129,11 +130,11 @@ export default function CategoryAndFilter() {
                   <input
                     className="input-radio"
                     type="radio"
-                    id="all"
+                    id="all2"
                     checked={!selectedBrand}
                     onChange={() => handleBrandChange("all")}
                   />
-                  <label>All (15)</label>
+                  <label htmlFor="all2">All (15)</label>
                 </li>
                 <li>
                   <input 
@@ -142,7 +143,7 @@ export default function CategoryAndFilter() {
                     checked={selectedBrand === "apple"}
                     onChange={() => handleBrandChange("apple")}
                   />
-                  <label>Apple (12)</label>
+                  <label htmlFor="apple">Apple (12)</label>
                 </li>
                 <li>
                   <input 
@@ -151,7 +152,7 @@ export default function CategoryAndFilter() {
                     checked={selectedBrand === "asus"}
                     onChange={() => handleBrandChange("asus")}
                     />
-                  <label>Asus (23)</label>
+                  <label htmlFor="asus">Asus (23)</label>
                 </li>
                 <li>
                   <input 
@@ -160,7 +161,7 @@ export default function CategoryAndFilter() {
                     checked={selectedBrand === "gionee"}
                     onChange={() => handleBrandChange("gionee")}
                   />
-                  <label>Gionee (34)</label>
+                  <label htmlFor="gionee">Gionee (34)</label>
                 </li>
                 <li>
                   <input 
@@ -169,7 +170,7 @@ export default function CategoryAndFilter() {
                     checked={selectedBrand === "micromax"}
                     onChange={() => handleBrandChange("micromax")}
                   />
-                  <label>Micromax (12)</label>
+                  <label htmlFor="micromax">Micromax (12)</label>
                 </li>
                 <li>
                   <input 
@@ -178,7 +179,7 @@ export default function CategoryAndFilter() {
                     checked={selectedBrand === "samsung"}
                     onChange={() => handleBrandChange("samsung")}
                   />
-                  <label>Samsung (54)</label>
+                  <label htmlFor="samsung">Samsung (54)</label>
                 </li>
               </ul>
               <ul style={{listStyle:"none"}}>
@@ -187,11 +188,11 @@ export default function CategoryAndFilter() {
                   <input
                     className="input-radio"
                     type="radio"
-                    id="all"
+                    id="all3"
                     checked={!selectedColor}
                     onChange={() => handleColorChange("all")}
                   />
-                  <label>All (15)</label>
+                  <label htmlFor="all3">All (15)</label>
                 </li>
                 <li>
                   <input 
@@ -200,7 +201,7 @@ export default function CategoryAndFilter() {
                     checked={selectedColor === "black"}
                     onChange={() => handleColorChange("black")}
                   />
-                  <label>Black (22)</label>
+                  <label htmlFor="black">Black (22)</label>
                 </li>
                 <li>
                   <input 
@@ -209,7 +210,7 @@ export default function CategoryAndFilter() {
                     checked={selectedColor === "blackLeather"}
                     onChange={() => handleColorChange("blackLeather")}
                   />
-                  <label>Black Leather (64)</label>
+                  <label htmlFor="blackLeather">Black Leather (64)</label>
                 </li>
                 <li>
                   <input 
@@ -218,7 +219,7 @@ export default function CategoryAndFilter() {
                     checked={selectedColor === "white"}
                     onChange={() => handleColorChange("white")}
                   />
-                  <label>White (23)</label>
+                  <label htmlFor="white">White (23)</label>
                 </li>
                 <li>
                   <input 
@@ -227,7 +228,7 @@ export default function CategoryAndFilter() {
                     checked={selectedColor === "gold"}
                     onChange={() => handleColorChange("gold")}
                   />
-                  <label>Gold (34)</label>
+                  <label htmlFor="gold">Gold (34)</label>
                 </li>
                 <li>
                   <input 
@@ -236,7 +237,7 @@ export default function CategoryAndFilter() {
                     checked={selectedColor === "spacegrey"}
                     onChange={() => handleColorChange("spacegrey")}
                   />
-                  <label>Spacegrey (56)</label>
+                  <label htmlFor="spacegrey">Spacegrey (56)</label>
                 </li>
               </ul>
               {/* <ul>
@@ -273,13 +274,13 @@ export default function CategoryAndFilter() {
             </div> */}
             <div>
               <div className="input-group filter-bar-search">
-                <input type="text" placeholder="Search" />
+                <input id="search"  type="text" placeholder="Search" />
                 <CiSearch className="input__search" />
                 <div className="input-group-append"> </div>
               </div>
             </div>
           </div>
-          <section className="latest-product">
+          <section className="latest__product">
             <div className="row">
               {filteredProducts.map((productItem) => (
                 <div
@@ -290,13 +291,13 @@ export default function CategoryAndFilter() {
                     <div className="product-card-img">
                       <img src={productItem.image} alt="productImage" />
                     </div>
-                    <div className="product-icon">
-                      <div className="icon">
+                    <div className="product-icon1">
+                      <div className="iconn">
                         <IoIosSearch
                           style={{ color: "#fff", fontSize: "20px" }}
                         />
                       </div>
-                      <div className="icon">
+                      <div className="iconn">
                         <GiShoppingCart
                         onClick={() => {
                           handleAddToCart(productItem)
@@ -304,7 +305,7 @@ export default function CategoryAndFilter() {
                           style={{ color: "#fff", fontSize: "20px" }}
                         />
                       </div>
-                      <div className="icon">
+                      <div className="iconn">
                         <CiHeart style={{ color: "#fff", fontSize: "20px" }} />
                       </div>
                     </div>

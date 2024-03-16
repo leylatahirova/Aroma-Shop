@@ -7,6 +7,12 @@
   padding: 160px;
   margin-bottom: 100px;
 }
+@media (max-width: 768px) {
+  .banner-text {
+    padding: 120px 80px;
+    margin-bottom: 50px;
+  }
+}
 .banner-text h1 {
   font-size: 36px;
   color: #222222;

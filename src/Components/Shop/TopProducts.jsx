@@ -104,7 +104,7 @@ export default function TopProducts() {
                   <div className="top-products__products" key={product.id}>
                       <img src={product.image} alt="product" />
                     <div>
-                      <Link to="../productdetails">{product.title}</Link>
+                      <Link to="../shopcategory">{product.title}</Link>
                       <p>{product.price}</p>
                     </div>
                   </div>

@@ -1,3 +1,14 @@
+.footer {
+  background-color: #002347;
+  padding-top: 180px;
+  padding-bottom: 40px;
+}
+@media (max-width: 768px) {
+  .footer {
+    padding-top: 20px;
+  }
+}
+
 .footer-about h4 {
   font-size: 36px;
   font-weight: 600;
@@ -13,13 +24,21 @@
   font-size: 18px;
   font-family: "Oswald", sans-serif;
   color: #fff;
-  margin-bottom: 28px;
+  margin-bottom: 30px;
   font-weight: 500;
 }
 .footer-links ul {
   display: flex;
   flex-direction: column;
+  padding-left: 0px;
+}
+.footer-links ul a {
+  text-decoration: none;
   color: #7b838a;
+  padding-bottom: 10px;
+}
+.footer-links li {
+  padding-bottom: 15px;
 }
 
 .footer-gallery h4 {
@@ -31,11 +50,46 @@
   margin-bottom: 28px;
 }
 .footer-gallery ul {
-  background-color: red;
-  height: 250px;
-}
-.footer-gallery li {
+  padding-left: 0px;
+  padding-right: 0px;
   display: flex;
   flex-wrap: wrap;
   padding-bottom: 10px;
+  width: 80px;
+}
+.footer-gallery li {
+  padding-bottom: 10px;
+}
+
+.footer-contact a {
+  text-decoration: none;
+}
+.footer-contact h4 {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
+  font-family: "Oswald", sans-serif;
+  color: #fff;
+  margin-bottom: 28px;
+}
+.footer-contact p {
+  color: #7b838a;
+}
+
+.ml-40 h6 {
+  font-weight: 400;
+  color: #fff;
+}
+.ml-40 .footer__icon {
+  background-color: #384aeb;
+  width: 28px;
+  height: 28px;
+  border-radius: 20px;
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ml-40 .footer__info {
+  padding-left: 15px;
 }/*# sourceMappingURL=Footer.css.map */

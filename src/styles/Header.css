@@ -1,31 +1,22 @@
-ul li {
+.navbar-ul li {
   display: inline;
   list-style: none;
-  margin-right: 30px;
+  margin-right: 40px;
 }
-ul li a {
+.navbar-ul li a {
   text-decoration: none;
   color: #222;
 }
-ul li a:hover {
+.navbar-ul li a:hover {
   color: #384aeb;
 }
-ul li a:active {
+.navbar-ul li a:active {
   color: #384aeb;
 }
-@media (max-width: 1024px) {
-  ul li {
-    display: none;
-  }
-}
-
-.navbar1 {
-  display: flex;
-}
-.navbar1 .nav-item {
+.navbar-ul .nav-item {
   position: relative;
 }
-.navbar1 .nav-item button {
+.navbar-ul .nav-item button {
   border: 1px solid #EEEEEE;
   padding: 10px 45px;
   color: #222;
@@ -33,11 +24,16 @@ ul li a:active {
   background-color: #fff;
   font-weight: 500;
 }
-.navbar1 .nav-item button:hover {
+.navbar-ul .nav-item button:hover {
   border: 1px solid #384aeb;
   opacity: 0.8;
   background-color: rgba(255, 255, 255, 0.8);
   transition: all 0.4s ease;
+}
+@media (max-width: 1024px) {
+  .navbar-ul {
+    display: none;
+  }
 }
 
 .header {
@@ -52,6 +48,25 @@ ul li a:active {
 @media (max-width: 1024px) {
   .header {
     padding-inline: 20px;
+    padding-bottom: 20px;
+  }
+  .header .logo {
+    display: flex;
+  }
+}
+
+.header__nav {
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+}
+.header__nav .hamburgerMenu {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .header__nav .hamburgerMenu {
+    display: block;
   }
 }
 
@@ -67,7 +82,4 @@ ul li a:active {
   position: absolute;
   left: 14px;
   top: -3px;
-}
-.shopping-basket .navbar2 {
-  padding-top: 30px;
 }/*# sourceMappingURL=Header.css.map */

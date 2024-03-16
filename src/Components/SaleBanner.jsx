@@ -11,7 +11,7 @@ export default function SaleBanner() {
         <div className="offer-text">
           <h3>Up To 50% Off</h3>
           <h4>Winter Sale</h4>
-          <p>Him she'd let them sixth saw light</p>
+          <p>Discover the perfect winter essentials! </p>
           <Link to="/shopcategory">
             <Button>Shop Now</Button>
           </Link>

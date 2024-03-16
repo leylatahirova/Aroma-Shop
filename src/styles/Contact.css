@@ -4,6 +4,11 @@
   justify-content: center;
   margin-bottom: 120px;
 }
+@media (max-width: 1024px) {
+  .contact__map {
+    margin-bottom: 60px;
+  }
+}
 
 .form-group {
   margin-bottom: 10px;
@@ -55,4 +60,5 @@
 
 .button-contactForm {
   border-radius: 0px;
+  margin-top: 20px;
 }/*# sourceMappingURL=Contact.css.map */

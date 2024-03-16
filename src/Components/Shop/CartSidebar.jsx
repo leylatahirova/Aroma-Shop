@@ -6,6 +6,7 @@ import { useSelector } from "react-redux";
 import { MdDeleteOutline } from "react-icons/md";
 import { useDispatch } from "react-redux";
 import { removeFromCart } from "../../redux/actions";
+import "../../styles/CartSidebar.sass";
 
 function CartSidebar({ show, handleClose }) {
   const cartItems = useSelector((state) => state.cart);
@@ -26,7 +27,6 @@ function CartSidebar({ show, handleClose }) {
     calculateSubtotal();
   }, [cartItems]);
 
-  
   const handleRemoveFromCart = (productId) => {
     dispatch(removeFromCart(productId));
   };
@@ -40,24 +40,28 @@ function CartSidebar({ show, handleClose }) {
         <div className="canvas">
           {cartItems.map((productItem, index) => (
             <div className="cart__items" key={index}>
-              <h6>{productItem.title}</h6>
+              <div style={{ display: "flex", justifyContent:"space-between" }}>
+                <h6>{productItem.title}</h6>
+                <MdDeleteOutline
+                  style={{
+                    fontSize: "20px",
+                    cursor: "pointer",
+                    marginLeft: "10px",
+                    color: "#880000",
+                  }}
+                  onClick={() => handleRemoveFromCart(productItem.id)}
+                />
+              </div>
               <div className="canvas__info">
                 <img src={productItem.image} alt={productItem.title} />
                 <div className="canvas__info__text">
                   <div className="c-text">
                     <p>Category: {productItem.category}</p>
-                    <MdDeleteOutline
-                      style={{
-                        fontSize: "20px",
-                        cursor: "pointer",
-                        marginLeft: "10px",
-                        color: "#880000",
-                      }}
-                      onClick={() => handleRemoveFromCart(productItem.id)}
-                    />
                   </div>
                   <div>
-                    <p>{productItem.price} x {productItem.quantity}</p> 
+                    <p>
+                      {productItem.price} x {productItem.quantity}
+                    </p>
                   </div>
                 </div>
               </div>

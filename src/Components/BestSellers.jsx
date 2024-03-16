@@ -1,4 +1,4 @@
-import React, { useRef,useState } from "react";
+import React, { useRef } from "react";
 import Row from "react-bootstrap/Row";
 import { GoArrowLeft } from "react-icons/go";
 import { GoArrowRight } from "react-icons/go";
@@ -16,11 +16,11 @@ import { useDispatch, useSelector } from "react-redux";
 export default function BestSellers() {
   const dispatch = useDispatch();
   const products = useSelector((state) => state.products);
-  const [showCartSidebar, setShowCartSidebar] = useState(false);
+
 
   const handleAddToCart = (productItem) => {
     dispatch(addToCart(productItem));
-    setShowCartSidebar(true);
+    
   };
   const sliderRef = useRef(null);
   
@@ -68,7 +68,7 @@ export default function BestSellers() {
 
   return (
       <Row style={{margin:"0 auto", maxWidth:"1200px", marginTop:"100px", marginBottom:"100px", }}>
-        <div className="product-heading">
+        <div className="product__heading">
           <p>Popular Item in the market</p>
           <h2>
             Best<span> Sellers</span>
@@ -78,7 +78,7 @@ export default function BestSellers() {
           <Slider ref={sliderRef} {...settings}>
             {products.map((productItem) => (
               <div key={productItem.id} className="col-md-6 col-lg-4 col-xl-3">
-                <div className="product-card">
+                <div className="product__card">
                   <div className="product-card-img">
                     <img src={productItem.image} alt="productImage" />
                   </div>
@@ -97,12 +97,12 @@ export default function BestSellers() {
                       <CiHeart style={{ color: "#fff", fontSize: "20px"}} />
                     </div>
                   </div>
-                  <div className="card-text">
+                  <div className="card__text">
                     <p>{productItem.category}</p>
                     <Link to={`/productdetails/${productItem.id}`}>
                       <h4>{productItem.title}</h4>
                     </Link>
-                    <p className="product-price">{productItem.price}</p>
+                    <p className="product__price">{productItem.price}</p>
                   </div>
                 </div>
               </div>

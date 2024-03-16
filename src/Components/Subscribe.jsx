@@ -1,7 +1,7 @@
 import React from "react";
 import { Container} from "react-bootstrap";
 import "../styles/Subscribe.sass";
-import Button from "./Button";
+
 
 export default function Subscribe() {
   return (
@@ -10,7 +10,7 @@ export default function Subscribe() {
           <div className="subscribe text-center">
             <h3 className="subscribe__title">Get Update From Anywhere</h3>
             <p>
-              Bearing Void gathering light light his eavening unto dont afraid
+              Stay informed with our subscription page!
             </p>
             <div>
               <form className="subscribe-form form-inline mt-5 pt-1" >
@@ -26,7 +26,7 @@ export default function Subscribe() {
                     }
                   />
                 </div>
-                <Button type="submit">Subscribe Now</Button>
+                <button className="subButton" type="submit">Subscribe Now</button>
               </form>
             </div>
           </div>

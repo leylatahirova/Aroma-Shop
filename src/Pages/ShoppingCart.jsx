@@ -7,8 +7,7 @@ import { useDispatch } from "react-redux";
 import { removeFromCart } from "../redux/actions";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { updateQuantity } from "../redux/actions";
-// import "../styles/ShoppingCart.sass";
+import "../styles/ShoppingCart.sass";
 
 export default function ShoppingCart() {
   const cartItems = useSelector((state) => state.cart);
@@ -102,7 +101,7 @@ useEffect(() => {
                 <tr>
                   <td colSpan={5}>
                     <div className="cart__area__subtotal">
-                      <h5 style={{ marginTop: "20px" }}>
+                      <h5 style={{ marginTop: "40px", marginBottom:"30px" }}>
                         Subtotal: ${subtotal.toFixed(2)}
                       </h5>
                     </div>
